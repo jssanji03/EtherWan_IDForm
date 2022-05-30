@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Files</title>
+
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="../dist/scss/style.css">
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light justify-content-between">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-link">
+                <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
+                <span class="brand-text font-weight-light">AdminLTE 3</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                        <li class="nav-header">EXAMPLES</li>
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Pages
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>新進人員表</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="title">新進人員履歷表</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                <li class="breadcrumb-item active">新進人員履歷表</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Content Header (Page header) -->
+            <!-- <section class="content-header ">
+                <div class="container">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <span class="title">新進人員履歷表</span>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <!-- Main content -->
+            <section class="content hrFile">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card folders">
+                                <div class="card-header">
+                                    <h3 class="card-title"></h3>
+                                    <!-- <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div> -->
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="nav flex-column" id="v-pills-tab" role="tablist">
+                                        <a class="nav-link js-check-Step active"  data-bs-toggle="pill" data-bs-target="#v-profile"
+                                            type="button" role="tab" >
+                                            <!-- <i class="far fa-circle"></i> -->
+                                            個人資料
+                                        </a>
+                                        <a class="nav-link js-check-Step" data-bs-toggle="pill" data-bs-target="#v-experience"
+                                            type="button" role="tab">
+                                            <!-- <i class="far fa-circle"></i> -->
+                                            經歷
+                                        </a>
+                                        <a class="nav-link js-check-Step" data-bs-toggle="pill" data-bs-target="#v-school"
+                                            type="button" role="tab" >
+                                            <!-- <i class="far fa-circle"></i> -->
+                                            學歷
+                                        </a>
+                                        <a class="nav-link js-check-Step" data-bs-toggle="pill" data-bs-target="#v-skill"
+                                            type="button" role="tab" >
+                                            <!-- <i class="far fa-circle"></i> -->
+                                            技能</a>
+                                        <a class="nav-link js-check-Step" data-bs-toggle="pill" data-bs-target="#v-personality"
+                                            type="button" role="tab">
+                                            <!-- <i class="far fa-circle"></i> -->
+                                            過往經驗、特質
+                                        </a>
+                                        <a class="nav-link js-check-Step" data-bs-toggle="pill" data-bs-target="#v-end"
+                                            type="button" role="tab">
+                                            <!-- <i class="far fa-circle"></i>  -->
+                                                確認同意
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+
+                        <div class="col-md-9 tab-content" id="v-pills-tabContent">
+                            <div class="card card-primary card-outline tab-pane fade show active" id="v-profile" role="tabpanel" data-slide="個人資料">
+                                <div class="card-header">
+                                    <h3 class="card-title mb-0">人員基本資料表</h3>
+                                    <!-- /.card-tools -->
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <form class="row g-3 infoArea" >
+                                        <div class="col-md-6">
+                                            <label for="validation01" class="form-label"><span class="required">*</span> 姓名</label>
+                                            <input type="text" class="form-control form-control-sm" id="validation01"  required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="validation02" class="form-label"><span class="required">*</span> 英文名（開立內部帳號參考）</label>
+                                            <input type="text" class="form-control form-control-sm" id="validation02" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="validation03" class="form-label"><span class="required">*</span> 身份證字號 （測驗系統使用）</label>
+                                            <input type="text" class="form-control form-control-sm" id="validation03" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="validation04" class="form-label"><span class="required">*</span> 出生日期</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control form-control-sm birthDate" id="validation04" required>
+                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label"> 婚姻</label>
+                                            <div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                                    <label class="form-check-label" for="inlineCheckbox1"> 已婚</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                                    <label class="form-check-label" for="inlineCheckbox2"> 未婚</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="validation06" class="form-label"> 血型</label>
+                                            <input type="text" class="form-control form-control-sm" id="validation06" >
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="validation07" class="form-label"><span class="required">*</span> 國籍</label>
+                                            <input type="text" class="form-control form-control-sm" id="validation07" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label"> 身份類別</label>
+                                            <div class="idCategory">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="Checkbox1">
+                                                    <label class="form-check-label" for="Checkbox1"> 一般</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+                                                    <label class="form-check-label" for="Checkbox2"> 外藉</label>
+                                                </div>
+                                                <div class="form-check form-check-inline d-inline-flex">
+                                                    <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                                                    <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 身障等級：<input type="text" class="form-control form-control-sm" style="width:60px;"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label"> 兵役</label>
+                                            <div class="idCategory">
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="Checkbox1">
+                                                    <label class="form-check-label" for="Checkbox1"> 免役</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+                                                    <label class="form-check-label" for="Checkbox2"> 役畢</label>
+                                                </div>
+                                                <div class="form-check form-check-inline d-inline-flex">
+                                                    <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                                                    <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 未/現役 (退伍日：
+                                                        <input type="text" class="form-control form-control-sm birthDate" style="width:80px;" placeholder="  年/  月">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <label for="validation08" class="form-label"> 戶籍地址</label>
+                                            <input type="text" class="form-control form-control-sm" id="validation08">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validation09" class="form-label"> 電話</label>
+                                            <input type="number" class="form-control form-control-sm" id="validation09">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <label for="validation10" class="form-label"><span class="required">*</span> 通訊地址</label>
+                                            <input type="text" class="form-control form-control-sm" id="validation10" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validation11" class="form-label"> 電話</label>
+                                            <input type="number" class="form-control form-control-sm" id="validation11">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <label for="validation12" class="form-label"> E-mail</label>
+                                            <input type="email" class="form-control form-control-sm" id="validation12" >
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validation13" class="form-label"><span class="required">*</span> 手機</label>
+                                            <input type="number" class="form-control form-control-sm" id="validation13" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validation14" class="form-label"><span class="required">*</span> 緊急聯絡人</label>
+                                            <input type="text" class="form-control form-control-sm" id="validation14" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validation14" class="form-label"><span class="required">*</span> 關係</label>
+                                            <select class="form-select form-select-sm" required>
+                                                <option selected>Open this select menu</option>
+                                                <option value="1">父</option>
+                                                <option value="2">母</option>
+                                                <option value="3">兄弟姊妹</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validation15" class="form-label"><span class="required">*</span> 電話</label>
+                                            <input type="number" class="form-control form-control-sm" id="validation15" required>
+                                        </div>
+                                        <div class="col-12 familyStatus">
+                                            <div class="d-flex justify-content-between">
+                                                <label class="form-label"> 家庭狀況
+                                                </label>
+                                                <input type="button" class="btn jess-btn-add js-addList-Btn" data-area="familyStatus" value="+">
+                                            </div>
+                                            <div class="table-responsive p-0">
+                                                <table class="table text-nowrap table-sm js-familyArea">
+                                                    <thead class="table-light text-center">
+                                                        <tr>
+                                                            <th>稱謂</th>
+                                                            <th>職業</th>
+                                                            <th>稱謂</th>
+                                                            <th>職業</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <select class="form-select form-select-sm" required>
+                                                                    <option selected>Open this select menu</option>
+                                                                    <option value="1">父</option>
+                                                                    <option value="2">母</option>
+                                                                    <option value="3">兄弟姊妹</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-select form-select-sm" required>
+                                                                    <option selected>Open this select menu</option>
+                                                                    <option value="1">父</option>
+                                                                    <option value="2">母</option>
+                                                                    <option value="3">兄弟姊妹</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                            <div class="card card-primary card-outline tab-pane fade" id="v-experience" role="tabpanel" data-slide="經歷">
+                                <div class="card-header">
+                                    <h3 class="card-title mb-0">經歷</h3>
+                                    <!-- /.card-tools -->
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-end experience">
+                                        <input type="button" class="btn jess-btn-add js-addList-Btn" data-area="experience" value="+">
+                                    </div>
+                                    <div class="table-responsive p-0">
+                                        <table class="table text-nowrap table-sm js-expArea">
+                                            <thead class="table-light text-center">
+                                                <tr>
+                                                    <th>服務單位/部門</th>
+                                                    <th>職稱</th>
+                                                    <th style="min-width:200px">起迄</th>
+                                                    <th>月薪/年薪</th>
+                                                    <th>離職原因</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="form-control form-control-sm">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control form-control-sm">
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group input-daterange">
+                                                            <input type="text" class="form-control form-control-sm">
+                                                            <span class="input-group-text" style="height: 31px;">To</span>
+                                                            <input type="text" class="form-control form-control-sm">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control form-control-sm">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control form-control-sm">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="col-12">
+                                    <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+                            <div class="card card-primary card-outline tab-pane fade" id="v-school" role="tabpanel" data-slide="學歷">
+                                <div class="card-header">
+                                    <h3 class="card-title mb-0"><span class="required">*</span> 學歷</h3>
+                                    <!-- /.card-tools -->
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <form>
+                                        <div class="table-responsive p-0">
+                                            <table class="table text-nowrap table-sm js-expArea">
+                                                <thead class="table-light text-center">
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>教育程度</th>
+                                                        <th>學校名稱</th>
+                                                        <th style="min-width:200px">科系所別</th>
+                                                        <th>就學起迄</th>
+                                                        <th>修業狀況</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <span class="required">*</span>最高學歷
+                                                        </td>
+                                                        <td>
+                                                            <select class="form-select form-select-sm" required>
+                                                                <option selected></option>
+                                                                <option value="1">博士</option>
+                                                                <option value="2">碩士</option>
+                                                                <option value="3">專科</option>
+                                                                <option value="3">高中以下</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" required>
+                                                        </td>
+                                                        <td>
+                                                            <div class="input-group input-daterange">
+                                                                <input type="text" class="form-control form-control-sm" required>
+                                                                <span class="input-group-text" style="height: 31px;">To</span>
+                                                                <input type="text" class="form-control form-control-sm" required>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm"required>
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm"required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            次高學歷
+                                                        </td>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option selected></option>
+                                                                <option value="1">博士</option>
+                                                                <option value="2">碩士</option>
+                                                                <option value="3">專科</option>
+                                                                <option value="3">高中以下</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm">
+                                                        </td>
+                                                        <td>
+                                                            <div class="input-group input-daterange">
+                                                                <input type="text" class="form-control form-control-sm">
+                                                                <span class="input-group-text" style="height: 31px;">To</span>
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            其他
+                                                        </td>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option selected></option>
+                                                                <option value="1">博士</option>
+                                                                <option value="2">碩士</option>
+                                                                <option value="3">專科</option>
+                                                                <option value="3">高中以下</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm">
+                                                        </td>
+                                                        <td>
+                                                            <div class="input-group input-daterange">
+                                                                <input type="text" class="form-control form-control-sm">
+                                                                <span class="input-group-text" style="height: 31px;">To</span>
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm">
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.card-body -->
+                                
+                            </div>
+                            <div class="card card-primary card-outline tab-pane fade" id="v-skill" role="tabpanel" data-slide="技能">
+                                <div class="card-header">
+                                    <h3 class="card-title mb-0"> 技能</h3>
+                                    <!-- /.card-tools -->
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <form class="row g-3 ">
+                                        <div class="col-md-12">
+                                            <label for="validation01" class="form-label"> 自述專長</label>
+                                            <input type="text" class="form-control form-control-sm" id="validation01" required>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="validation01" class="form-label"> 證照/執照</label>
+                                            <input type="text" class="form-control form-control-sm" id="validation01" required>
+                                        </div>
+                                        <div class="col-12 ">
+                                            <div class="d-flex justify-content-between">
+                                                <label class="form-label"> 語言能力(流利/中等/略懂)
+                                                </label>
+                                                <input type="button" class="btn jess-btn-add js-addList-Btn" data-area="language" value="+">
+                                            </div>
+                                            <div class="table-responsive p-0">
+                                                <table class="table text-nowrap table-sm js-language">
+                                                    <thead class="table-light text-center">
+                                                        <tr>
+                                                            <th>類別</th>
+                                                            <th>聽</th>
+                                                            <th>說</th>
+                                                            <th>讀</th>
+                                                            <th>寫</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-select form-select-sm" required>
+                                                                    <option selected></option>
+                                                                    <option value="1">流利</option>
+                                                                    <option value="2">中等</option>
+                                                                    <option value="3">略懂</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-select form-select-sm" required>
+                                                                    <option selected></option>
+                                                                    <option value="1">流利</option>
+                                                                    <option value="2">中等</option>
+                                                                    <option value="3">略懂</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-select form-select-sm" required>
+                                                                    <option selected></option>
+                                                                    <option value="1">流利</option>
+                                                                    <option value="2">中等</option>
+                                                                    <option value="3">略懂</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-select form-select-sm" required>
+                                                                    <option selected></option>
+                                                                    <option value="1">流利</option>
+                                                                    <option value="2">中等</option>
+                                                                    <option value="3">略懂</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label"> 駕照</label>
+                                            <div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="licence01" value="option1">
+                                                    <label class="form-check-label" for="licence01"> 無</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="licence02" value="option2">
+                                                    <label class="form-check-label" for="licence02"> 汽車</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="licence03" value="option2">
+                                                    <label class="form-check-label" for="licence03"> 機車</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label"> 自備交通工具</label>
+                                            <div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="licence01" value="option1">
+                                                    <label class="form-check-label" for="licence01"> 無</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="licence02" value="option2">
+                                                    <label class="form-check-label" for="licence02"> 汽車</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="licence03" value="option2">
+                                                    <label class="form-check-label" for="licence03"> 機車</label>
+                                                </div>
+                                                <div class="form-check form-check-inline d-inline-flex">
+                                                    <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                                                    <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 其他<input type="text"
+                                                            class="form-control form-control-sm" style="width:60px;"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+
+                                            <hr>
+                                        </div>
+                                        <div class="col-12 ">
+                                            <div class="d-flex justify-content-between">
+                                                <div>
+                                                    <h6 class="form-label text-primary"> 請列舉過往主管、同事、老師或其他熟悉您工作情況之推薦人資料
+                                                    </h6>
+                                                    <label class="form-label">提供以下資料代表已同意聯繫推薦人進行招募相關之背景調查，並免除推薦人個資揭露之法律責任
+                                                    </label>
+                                                </div>
+                                                <input type="button" class="btn jess-btn-add js-addList-Btn" data-area="office" value="+">
+                                            </div>
+                                            <div class="table-responsive p-0">
+                                                <table class="table text-nowrap table-sm js-office">
+                                                    <thead class="table-light text-center">
+                                                        <tr>
+                                                            <th>姓名</th>
+                                                            <th>所任公司/機關名稱</th>
+                                                            <th>部門</th>
+                                                            <th>稱謂</th>
+                                                            <th>關係 <small>如：主管/同事</small></th>
+                                                            <th>聯繫電話</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <div class="card card-primary card-outline tab-pane fade" id="v-personality" role="tabpanel" data-slide="過往經驗、特質">
+                                <div class="card-header">
+                                    <h3 class="card-title mb-0"><span class="required">*</span> 過往經驗、特質<small>(300字以內)</small></h3>
+                                    <!-- /.card-tools -->
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <form class="row g-3 ">
+                                        <div class="col-md-12">
+                                            <label for="Textarea01" class="form-label"><span class="required">*</span> 求學或工作經驗中，列舉最有成就感的幾項工作(學習)成果及從中展現之能力。</label>
+                                            <textarea class="form-control" id="Textarea01" rows="3" required></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="Textarea02" class="form-label"><span class="required">*</span> 對於此職務，您認為理想的符合人選應具備那些條件？您與這些條件的相符程度是？</label>
+                                            <textarea class="form-control" id="Textarea02" rows="3" required></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="Textarea03" class="form-label"><span class="required">*</span> 對於此工作內容及未來發展有何期望及抱負？</label>
+                                            <textarea class="form-control" id="Textarea03" rows="3" required></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="Textarea04" class="form-label"><span class="required">*</span> 對於公司及工作環境，您最重視哪些因素？有什麼期望？</label>
+                                            <textarea class="form-control" id="Textarea04" rows="3" required></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="Textarea05" class="form-label"><span class="required">*</span> 描述您平日活動、興趣嗜好及人際關係。</label>
+                                            <textarea class="form-control" id="Textarea05" rows="3" required></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="Textarea06" class="form-label"><span class="required">*</span> 你自認有那些優點？客觀的看自己，有那些缺點？</label>
+                                            <textarea class="form-control" id="Textarea06" rows="3" required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <hr>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label text-primary">益網重視『務實』、『同理互助』與『當責』三項價值觀，請針對下列問題提供您的看法與認知
+                                            (300字以內)
+                                            </label>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="Textarea07" class="form-label"><span class="required">*</span> 以您的工作經驗為例，您認為何謂『務實』的工作態度？</label>
+                                            <textarea class="form-control" id="Textarea07" rows="3" required></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="Textarea08" class="form-label"><span class="required">*</span> 您認為如何在工作中『同理互助』？</label>
+                                            <textarea class="form-control" id="Textarea08" rows="3" required></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="Textarea09" class="form-label"><span class="required">*</span> 您如何展現『當責』態度於工作中？請舉例說明。</label>
+                                            <textarea class="form-control" id="Textarea09" rows="3" required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <div class="card card-primary card-outline tab-pane fade" id="v-end" role="tabpanel" data-slide="確認同意">
+                                <div class="card-header">
+                                    <h3 class="card-title mb-0"> 確認同意</h3>
+                                    <!-- /.card-tools -->
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <form class="row g-3 ">
+                                        <div class="col-md-12">
+                                            <label class="form-label"><span class="required">*</span> 應徵管道</label>
+                                            <div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="licence01" value="option1">
+                                                    <label class="form-check-label" for="licence01"> 104</label>
+                                                </div>
+                                                <div class="form-check form-check-inline d-inline-flex">
+                                                    <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                                                    <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 徵才活動名：<input type="text"
+                                                            class="form-control form-control-sm" style="width:60px;"></label>
+                                                </div>
+                                                <div class="form-check form-check-inline d-inline-flex">
+                                                    <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                                                    <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 員工推薦，員工名：<input type="text"
+                                                            class="form-control form-control-sm" style="width:60px;"></label>
+                                                </div>
+                                                <div class="form-check form-check-inline d-inline-flex">
+                                                    <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                                                    <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 其它：<input type="text"
+                                                            class="form-control form-control-sm" style="width:60px;"></label>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="validation01" class="form-label"><span class="required">*</span> 希望待遇</label>
+                                            <input type="text" class="form-control form-control-sm" id="validation01" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="validation04" class="form-label"><span class="required">*</span> 預計報到日</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control form-control-sm birthDate" id="validation04" required>
+                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="form-label"><span class="required">*</span> 資料是否保留至益網人才資料庫</label>
+                                            <div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="licence01" value="option1">
+                                                    <label class="form-check-label" for="licence01"> 是</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="licence01" value="option1">
+                                                    <label class="form-check-label" for="licence01"> 否(將於面試結果通知後一個月刪除)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 text-center checkForm">
+                                            <label class="form-label">本人所填上列各項均屬事實，若有不實或虛構，願接受取消錄取資格或受免職之處分。</label>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="confirm01" value="option1">
+                                                <label class="form-check-label" for="confirm01"> 同意</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                            <label class="form-label">填表日期：<span class="js-confirmDate"></span></label>
+                                        </div>
+                                        <div class="col-12 ">
+                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </div>
+                <!-- /.row -->
+            </section>
+            <!-- /.content -->
+            <!-- <section>
+                <div class="col-12">
+                    <button class="submit-Btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </section> -->
+        </div>
+        <!-- /.content-wrapper -->
+        <section>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-fullscreen-sm-down">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">個人資料蒐集、處理及利用同意書</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body row">
+                            <div class="col-12 mb-3">
+                                本人針對益網科技股份有限公司（以下簡稱公司）依據勞基法第7條及個人資料保護法等規定蒐集、處理及利用本人個人資料，已充分知悉並同意下列事項。
+                                <br>
+                                <br>
+                                <ul>
+                                    <li>一、蒐集之目的</li>
+                                    <li>人事行政管理、內部資料分析、人才庫</li>
+                                    <br>
+                                    <li>二、個人資料之類別</li>
+                                    <li>識別類、特徵類、家庭情形、社會情況、教育、技術或其他專業、受僱情形、財務細節、商業資訊、健康與其他因聘僱所需之人事管理資料。</li>
+                                    <br>
+                                    <li>三、個人資料利用之期間、地區、對象及方式
+                                        <ul>
+                                            <li>
+                                                ・期間：包括求職、在職，及離職後於公司存續期間(如合併，依存續公司之存續期間)保存。</li>
+                                            <li>・對象：公司(包含母子公司及國內外關係企業)、受託辦理上述特定目的之廠商(包含但不限於保險公司、銀行、旅行社、醫療院所等)、<br>依法定義務必要提供之第三方、本人離職後接觸之徵才廠商基於背景調查目的，及為履行勞動契約所涉及必要接觸、磋商或聯繫行為之第三人。</li>
+                                            <li>・地區：益網科技營業地區及上述使用對象所在地。</li>
+                                            <li>・使用方式：依照公司工作規則及各項管理規章辦理。</li>
+                                        </ul>
+                                    </li>
+                                    <br>
+                                    <li>四、背景調查</li>
+                                    <li>本人同意公司得基於聘僱評估之目的向持有本人個人資料之企業、個人、學校、銀行或政府機關請求揭露上述個人資料，並免除因事項揭露可能對本人造成損失之責任，受僱後亦同。</li>
+                                    <br>
+                                    <li>五、本人得行使之權利及方式</li>
+                                    <li>公司持有本人個人資料期間，本人得依公司規定提出書面申請，請求查詢、複製、補充、更正、停止蒐集處理利用或刪除。</li>
+                                    <li>依公司規定非必要提供之個人資料，未提供時不影響本人相關權益。</li>
+                                    <br>
+                                    <li>六、電子簽章</li>
+                                    <li>本人同意與公司間之往來得以電子文件為表示方法，並具書面表示之效果。</li>
+                                    <br>
+                                    <li>七、保存期限</li>
+                                    <li>依公司管理制度規定辦理。</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="confirm01" value="option1">
+                                    <label class="form-check-label" for="confirm01"> 同意</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <label class="form-label">填表日期：<span class="js-confirmDate"></span></label>
+                            </div>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-block">
+                <b>Version</b> 3.2.0
+            </div>
+            <strong>Copyright &copy; 2014-2021 <a>AdminLTE.io</a>.</strong> All rights reserved.
+        </footer>
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <script src="../plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
+    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <!-- fullCalendar 2.2.5 -->
+    <script src="../plugins/moment/moment.js"></script>
+    <script src="../plugins/fullcalendar-scheduler/main.js"></script>
+    <!-- Select2 -->
+    <script src="../plugins/select2/js/select2.full.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="../plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <!-- custom -->
+    <script src="../dist/js/component.js"></script>
+    <script src="../dist/js/file.js"></script>
+    <!-- Page specific script -->
+</body>
+
+</html>

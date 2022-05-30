@@ -1,0 +1,39 @@
+// Primary Color
+$primary: #325eaf;
+.bg_primary{
+    background-color: $primary;
+}
+.primary{
+    color: $primary;
+}
+
+// Secondary Color
+$secondary: #2c7edb;
+.secondary{
+    color: $secondary;
+}
+.bg_secondary{
+    background-color: $secondary;
+}
+
+
+// Text Color
+$text: #5a5a5a;
+
+
+
+// Body Background
+$bg-body: #343A40;
+
+
+// White Color
+$white: #ffffff;
+.white{
+    color: $white !important;
+}
+
+
+//light Blue
+$lightBlue:#D9EDF7;
+
+$yellow: #FFCC01;
