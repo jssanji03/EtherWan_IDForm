@@ -3,7 +3,8 @@ const tableArea = document.querySelector(".js-familyArea")
 const expArea = document.querySelector(".js-expArea")
 const languageArea = document.querySelector(".js-language")
 const officeArea = document.querySelector(".js-office")
-const confirmDate = document.querySelector(".js-confirmDate")
+const confirmDate = document.querySelectorAll(".js-confirmDate")
+const mDate = document.querySelector(".js-Date")
 const submitBtn = document.querySelectorAll(".js-submit")
 addFormToList.forEach((item) => {
   item.addEventListener("click", addTemplate)
@@ -142,8 +143,10 @@ function today() {
   const Today = new Date();
   const year= Today.getFullYear()
   const month= Today.getMonth()+1
-  const day= Today.getDate()
-  confirmDate.innerHTML = `${year}年${month}月${day}日`
+  const day = Today.getDate()
+  confirmDate.forEach((item) => {
+    item.innerHTML = `${year}年${month}月${day}日`
+  })
 }
 // submitBtn.forEach((item) => {
 //   item.addEventListener("click", completedForm)
