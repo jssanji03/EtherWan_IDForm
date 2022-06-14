@@ -1,5 +1,5 @@
-const addRecruitList = document.querySelector('.js-addRecruitList')
-// const editAreaSave = document.querySelector('.js-editSave')
+const addRecruitList = document.querySelector('.js-addResult')
+const recruitFormArea = document.querySelector('.js-recruitForm')
 const formDept = document.querySelector('.js-dept')
 const formDate = document.querySelector('.js-date')
 const formJob = document.querySelector('.js-job')
@@ -21,8 +21,7 @@ function addNewList(e) {
   data.push(obj)
   console.log(data);
   init()
-  // formArea.reset()
-  // console.log('addNewList')
+  recruitFormArea.reset()
 }
 
 function init() {
@@ -31,21 +30,20 @@ function init() {
     const recruitArea = document.querySelector('.recruitArea')
     str += `
                 <tr>
-                  <td>
-                    <a class="btn btn-sm btn-warning" href=""><i class="fas fa-pen"></i>
-                    </a>
+                  <td class="status text-center">
+                      <a class="btn btn-sm btn-warning" href="./recruit_next.html"><i class="fas fa-pen"></i></a>
                   </td>
-                  <td>Open</td>
-                  <td>${items.dept}</td>
-                  <td>${items.job}</td>
-                  <td>${items.num}</td>
-                  <td>${items.date}</td>
-                  <td>${items.content}</td>
-                  <td>
-                      <a class="" href="./stage.html">徵選階段</a>
+                  <td data-th="狀態"><span>Open</span></td>
+                  <td data-th="部門">${items.dept}</td>
+                  <td data-th="職缺">${items.job}</td>
+                  <td data-th="BPM單號">${items.num}</td>
+                  <td data-th="刊登日">${items.date}</td>
+                  <td data-th="需求">${items.content}</td>
+                  <td data-th="履歷表">
+                      <a class="" href="./index.html">履歷表
                   </a>
                   </td>
-                </tr>
+              </tr>
         `
     recruitArea.innerHTML = str
   })

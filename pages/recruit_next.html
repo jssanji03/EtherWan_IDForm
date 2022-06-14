@@ -114,110 +114,55 @@
                 </div>
             </section>
             <!-- Content Header (Page header) -->
-            <section class="content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title m-0">查詢條件</h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="form-group">
-                                                <label for="tableName">職缺</label>
-                                                <input class="form-control" type="text" id="" value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="form-group">
-                                                <label for="columnName">BPM單號</label>
-                                                <input class="form-control" type="text" id="" value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="form-group">
-                                                <label for="columnName">刊登日</label>
-                                                <input class="form-control" type="date" id="" value="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6">
-                                            <div class="form-group">
-                                                <label for="columnName">狀態</label>
-                                                <select class="form-select select2">
-                                                    <option selected></option>
-                                                    <option >Open</option>
-                                                    <option >Close</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-end">
-                                    <button type="button" class="btn btn-secondary mr-3 " id="btn-search"><i class="fas fa-search"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-primary mr-3" data-bs-toggle="modal" data-bs-target="#addNewRecruit" id="btn-add"><i class="fas fa-plus"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            
-                        </div>
-                    </div>
-                </div>
-            </section>
             <!-- /.content -->
             <section class="content">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="card card-secondary card-outline">
-                                <div class="card-header">
-                                    <h3 class="card-title m-0"><strong>查詢結果</strong></h3>
+                            <!-- Main content -->
+                            <div class="callout callout-info p-3 mb-3">
+                                <!-- title row -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4 class="info-title">
+                                            <i class="fas fa-globe"></i> 應徵者資訊
+                                            <small class="float-right">應徵姓名: OOO</small>
+                                        </h4>
+                                    </div>
+                                    <!-- /.col -->
                                 </div>
-                                <div class="card-body">
-                                    <table class="table table-bordered datatable-card-onlyWord" style="width: 100%;">
-                                        <thead>
-                                            <tr class="tr-only-hide">
-                                                <th>動作</th>
-                                                <th>狀態</th>
-                                                <th>部門</th>
-                                                <th>職缺</th>
-                                                <th>BPM單號</th>
-                                                <th>刊登日</th>
-                                                <th>需求</th>
-                                                <th>履歷表</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="recruitArea">
-                                            <tr>
-                                                <td class="status text-center">
-                                                    <a class="btn btn-sm btn-warning" href="./recruit_next.html"><i class="fas fa-pen"></i>
-                                                    </a>
-                                                </td>
-                                                <td data-th="狀態"><span>Open</span></td>
-                                                <td data-th="部門">生產部</td>
-                                                <td data-th="職缺">HDV工程師</td>
-                                                <td data-th="BPM單號">2022060801</td>
-                                                <td data-th="刊登日">2022/6/8</td>
-                                                <td data-th="需求">擴編</td>
-                                                <td data-th="履歷表">
-                                                    <a class="" href="./index.html">履歷表
-                                                </a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <!-- info row -->
+                                <div class="row info-content">
+                                    <div class="col-lg-3 col-6">
+                                        部門: 生產部<br>
+                                        BPM單號: 2022060801<br>
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col-lg-3 col-6">
+                                        職缺: HDV工程師<br>
+                                        E-Mail: XXX@G.M.C<br>
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col-lg-3 col-6">
+                                        刊登日: 2022-06-081<br>
+                                        電話: 987654321<br>
+                                    </div>
+                                    <div class="col-lg-3 col-6">
+                                        需求: 擴編<br>
+                                        履歷表: <a class="text-decoration-none text-primary" href="./index.html">履歷表</a>
+            
+                                    </div>
+                                    <!-- /.col -->
                                 </div>
+                                <!-- /.row -->
                             </div>
-                        </div>
-                    </div>
-                </div>
+                            <!-- /.invoice -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
             </section>
             <!-- ##### Table Start ##### -->
-            <!-- <section class="content">
+            <section class="content">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -225,11 +170,13 @@
                                 <div class="card-header">
                                     <h3 class="card-title m-0"><strong>應徵者列表</strong></h3>
                                     <div class="d-flex justify-content-end">
-                                        <input type="button" class="btn jess-btn-add js-addList-Btn" data-area="recruit" value="+">
+                                        <input type="button" class="btn jess-btn-add"
+                                            value="+" data-bs-toggle="modal" data-bs-target="#addNew">
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <table class="table datatable-card nowrap text-center js-recruitTable" style="width: 100%;">
+                                    <table class="table datatable-card-onlyWord nowrap text-center js-recruitTable"
+                                        style="width: 100%;">
                                         <thead>
                                             <tr class="tr-only-hide">
                                                 <th scope="col">面試結果</th>
@@ -240,8 +187,8 @@
                                                 <th scope="col">甄選階段</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
+                                        <tbody class="recruitListArea">
+                                            <!-- <tr>
                                                 <td data-th="面試結果">
                                                     <select class="form-select form-select-sm" disabled>
                                                         <option value="錄取">錄取</option>
@@ -259,7 +206,8 @@
                                                     <input type="text" class="form-control form-control-sm">
                                                 </td>
                                                 <td class="status text-center">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#interview">
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                                                        data-bs-toggle="modal" data-bs-target="#interview">
                                                         面試通知
                                                     </button>
                                                 </td>
@@ -267,7 +215,7 @@
                                                     <a class="" href="./stage.html">徵選階段
                                                     </a>
                                                 </td>
-                                            </tr>
+                                            </tr> -->
                                         </tbody>
                                     </table>
                                 </div>
@@ -275,80 +223,105 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+                
+            </section>
 
             <!-- Button -->
-            <section class="content button-footer ">
-                <div class="col-12">
-                    <div class="card card-default p-2">
-                        <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn btn-warning mr-2"><i class="fas fa-save me-2"></i>儲存</button>
-                            <button type="submit" class="btn btn-primary mr-2"><i class="fas fa-check-circle me-2"></i>結案</button>
-                            <button type="submit" class="btn btn-danger"><i class="fas fa-times-circle me-2"></i>作廢</button>
+            <section class="content button-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card card-default p-2">
+                                <div class="d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-warning mr-2"><i class="fas fa-save me-2"></i>儲存</button>
+                                    <button type="submit" class="btn btn-primary mr-2"><i
+                                            class="fas fa-check-circle me-2"></i>結案</button>
+                                    <button type="submit" class="btn btn-danger"><i class="fas fa-times-circle me-2"></i>作廢</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            
             </section>
 
             <!-- Modal -->
-            <div class="modal fade" id="addNewRecruit" tabindex="-1" aria-hidden="true">
+            <div class="modal fade" id="addNew" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">新增</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">新增應徵者</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form class="js-recruitForm">
+                            <form class="js-Form">
                                 <div class="row">
-                                    <!--  部門  -->
                                     <div class="mb-2 col-lg-3 col-md-6 col-12">
-                                        <label class="form-label">部門:</label>
+                                        <label class="form-label">面試結果:</label>
+                                        <select class="form-select form-select-sm js-recruitResult" disabled>
+                                            <option value="錄取">錄取</option>
+                                            <option value="備取">備取</option>
+                                            <option value="未錄取">未錄取</option>
+                                        </select>
                                         <div class="col-12 p-0">
-                                            <select class="form-select form-select-sm js-dept">
-                                                <option selected disabled hidden>Open this select menu</option>
-                                                <option value="生產部">生產部</option>
-                                                <option value="行銷部">行銷部</option>
-                                                <option value="業務部">業務部</option>
-                                            </select>
-                                            <p class="form-message" data-message="部門"></p>
                                         </div>
                                     </div>
                                     <div class="mb-2 col-lg-3 col-md-6 col-12">
-                                        <div class="form-group col-lg-12">
-                                            <label class="col-12 form-label" >職缺:</label>
-                                            <input class="form-control form-control-sm js-job" type="text" value="HDV工程師"></input>
-                                        </div>
+                                        <label class="col-12 form-label">應徵姓名:</label>
+                                        <input type="text" class="form-control form-control-sm js-recruitName">
                                     </div>
                                     <div class="mb-2 col-lg-3 col-md-6 col-12">
-                                        <div class="form-group col-lg-12">
-                                            <label class="col-12 form-label" for="fixedArea">BPM單號:</label>
-                                            <input class="form-control form-control-sm js-num" type="text" value="2022060801"></input>
-                                        </div>
+                                        <label class="col-12 form-label">E-Mail:</label>
+                                        <input type="text" class="form-control form-control-sm js-recruitMail">
                                     </div>
-                                    <!--  刊登日  -->
                                     <div class="mb-2 col-lg-3 col-md-6 col-12">
-                                        <label class="form-label">刊登日:</label>
-                                        <input class="form-control form-control-sm js-date" name="singleDate" type="date">
-                                    </div>
-                                    <!--  需求  -->
-                                    <div class="mb-2 col-12">
-                                        <label class="form-label" for="contentArea">需求:</label>
-                                        <textarea class="form-control col-12 js-content" cols=10 rows="2"
-                                            maxlength="700" id="contentArea"></textarea>
+                                        <label class="col-12 form-label">電話:</label>
+                                        <input type="text" class="form-control form-control-sm js-recruitTel">
                                     </div>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-                            <button type="button" class="btn btn-primary js-addResult" data-id="">新增</button>
-                            <button type="button" class="btn btn-info js-editSave" data-id="">儲存</button>
+                            <button type="button" class="btn btn-primary js-addRecruitList" >新增</button>
+                            <button type="button" class="btn btn-info js-editSave">儲存</button>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Modal -->
+            <div class="modal fade" id="interview" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">面試通知</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="mb-2 col-12">
+                                    <label class="form-label">主旨:</label>
+                                    <input class="form-control form-control-sm js-job" type="text"
+                                        value="益網 [職缺]-[應徵姓名] 面試通知"></input>
+                                </div>
+                                <div class="mb-2 col-12">
+                                    <label class="form-label">內容:</label>
+                                    <textarea class="summernote">
+                                                    <p>[應徵姓名]</p>
+                                                    <p>XXXX</p>
+                                                </textarea>
+                                </div>
+                            </div>
             
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning" id="mail-submit">儲存</button>
+                            <button type="button" class="btn btn-primary">發送</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
@@ -381,7 +354,7 @@
     <script src="../dist/js/adminlte.min.js"></script>
     <!-- custom -->
     <script src="../dist/js/file.js"></script>
-    <script src="../dist/js/recruit.js"></script>
+    <script src="../dist/js/recruit_next.js"></script>
     <script src="../dist/js/component.js"></script>
     <!-- Page specific script -->
 </body>

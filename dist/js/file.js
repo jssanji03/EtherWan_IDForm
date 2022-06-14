@@ -18,7 +18,7 @@ function addTemplate(e) {
   if (addTr == "familyStatus") {
       const trAdd = tableArea.insertRow()
         let str = `
-        <td>
+        <td data-th="稱謂">
             <select class="form-select form-select-sm" required>
               <option selected>Open this select menu</option>
               <option value="1">父</option>
@@ -26,10 +26,10 @@ function addTemplate(e) {
               <option value="3">兄弟姊妹</option>
             </select>
         </td>
-        <td>
+        <td data-th="職業">
             <input type="text" class="form-control form-control-sm">
         </td>
-        <td>
+        <td data-th="稱謂">
             <select class="form-select form-select-sm" required>
               <option selected>Open this select menu</option>
               <option value="1">父</option>
@@ -37,7 +37,7 @@ function addTemplate(e) {
               <option value="3">兄弟姊妹</option>
             </select>
         </td>
-        <td>
+        <td data-th="職業">
             <input type="text" class="form-control form-control-sm">
         </td>
         `

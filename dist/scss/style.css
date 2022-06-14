@@ -628,6 +628,80 @@ table.dataTable .assignActive {
 }
 
 @media (max-width: 992px) {
+  .table-card {
+    border: none !important;
+    min-width: 100%;
+    /*針對tr去做隱藏*/
+  }
+  .table-card thead .tr-only-hide {
+    display: none !important;
+  }
+  .table-card tbody {
+    background-color: transparent;
+    /*讓tr變成區塊主要讓他有個區塊*/
+  }
+  .table-card tbody tr {
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    line-height: 15px;
+    -webkit-box-shadow: 2px 2px 5px #ccc;
+            box-shadow: 2px 2px 5px #ccc;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none !important;
+    padding: 10px !important;
+  }
+  .table-card tbody tr:nth-child(odd) {
+    border-left: 10px solid #5a5a5a;
+    border-radius: 20px;
+    background-color: #E8F7FC;
+  }
+  .table-card tbody tr:nth-child(even) {
+    border-left: 10px solid #FFCC01;
+    border-radius: 20px;
+    background-color: #ededed;
+  }
+  .table-card tbody tr .status:before {
+    display: none;
+  }
+  .table-card tbody tr td {
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    border: none !important;
+  }
+  .table-card tbody tr td:before {
+    /*最重要的就是這串*/
+    content: attr(data-th) " : ";
+    /*最重要的就是這串*/
+    display: inline-block;
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: 400;
+    margin-right: 10px;
+    text-align: start;
+    color: #325eaf;
+  }
+  .table-card tbody tr td input.form-control {
+    width: 90%;
+  }
+  .table-card tbody tr td select.form-select {
+    width: 90%;
+  }
+  .table-card tbody tr td .input-group {
+    width: 90%;
+  }
+  .table-card tbody tr td .input-group input.form-control {
+    width: 40%;
+  }
+  .table-card tfoot {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
   .datatable-card {
     border: none !important;
     min-width: 100%;
@@ -732,7 +806,7 @@ table.dataTable .assignActive {
     display: none;
   }
   .datatable-card-onlyWord tbody tr td {
-    text-align: left;
+    text-align: start !important;
     overflow: hidden;
     width: 100%;
     display: block;
@@ -747,7 +821,7 @@ table.dataTable .assignActive {
     width: 20%;
     font-weight: 400;
     margin-right: 10px;
-    text-align: end;
+    text-align: start !important;
     color: #325eaf;
   }
   .datatable-card-onlyWord tbody tr td input.form-control {

@@ -29,8 +29,6 @@ $(function () {
     })
     $('.datatable-card').DataTable({
         searching: false,
-        pageLength: 3,
-        // stateSave: true,
         "paging": false,
         "ordering": false,
         "scrollX": true,
@@ -48,11 +46,11 @@ $(function () {
     }
   );
     $('.datatable-card-onlyWord').DataTable({
-        searching: false,
-        pageLength: 3,
-        "paging": false,
-        "ordering": false,
-        "scrollX": true,
+      "responsive": false,
+      "lengthChange": false,
+      "autoWidth": false,
+      "searching": true,
+        // "scrollX": true,
         "language": {
             "info": "顯示 _PAGE_ 至 _PAGES_",
             "search": "搜尋 :",
@@ -63,7 +61,10 @@ $(function () {
             "lengthMenu": "顯示 _MENU_ 筆資料"
           },
         dom: "<'row'<'col-xl-12'fr>>" +
-            "<'row'<'col-sm-12'tlp>>",
+        "<'row'<'col-sm-12'tlp>>",
+        "initComplete": function (settings, json) {
+            $(".datatable-card-onlyWord").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
+        },
     }
   );
 

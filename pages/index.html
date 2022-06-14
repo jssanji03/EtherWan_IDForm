@@ -126,14 +126,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <div class="card folders">
+                            <div class="card folders collapsed-card">
                                 <div class="card-header">
                                     <h3 class="card-title"></h3>
-                                    <!-- <div class="card-tools">
+                                    <div class="card-tools">
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                             <i class="fas fa-minus"></i>
                                         </button>
-                                    </div> -->
+                                    </div>
                                 </div>
                                 <div class="card-body p-0">
                                     <div class="nav flex-column" id="v-pills-tab" role="tablist">
@@ -321,10 +321,10 @@
                                                 </label>
                                                 <input type="button" class="btn jess-btn-add js-addList-Btn" data-area="familyStatus" value="+">
                                             </div>
-                                            <div class="table-responsive p-0">
-                                                <table class="table text-nowrap table-sm js-familyArea">
+                                            <div class="card-body">
+                                                <table class="table table-card nowrap text-center table-sm js-familyArea" style="width: 100%;">
                                                     <thead class="table-light text-center">
-                                                        <tr>
+                                                        <tr class="tr-only-hide">
                                                             <th>稱謂</th>
                                                             <th>職業</th>
                                                             <th>稱謂</th>
@@ -333,7 +333,7 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>
+                                                            <td data-th="稱謂">
                                                                 <select class="form-select form-select-sm" required>
                                                                     <option selected>Open this select menu</option>
                                                                     <option value="1">父</option>
@@ -341,10 +341,10 @@
                                                                     <option value="3">兄弟姊妹</option>
                                                                 </select>
                                                             </td>
-                                                            <td>
+                                                            <td data-th="職業">
                                                                 <input type="text" class="form-control form-control-sm">
                                                             </td>
-                                                            <td>
+                                                            <td data-th="稱謂">
                                                                 <select class="form-select form-select-sm" required>
                                                                     <option selected>Open this select menu</option>
                                                                     <option value="1">父</option>
@@ -352,7 +352,7 @@
                                                                     <option value="3">兄弟姊妹</option>
                                                                 </select>
                                                             </td>
-                                                            <td>
+                                                            <td data-th="職業">
                                                                 <input type="text" class="form-control form-control-sm">
                                                             </td>
                                                         </tr>
@@ -379,9 +379,9 @@
                                         <input type="button" class="btn jess-btn-add js-addList-Btn" data-area="experience" value="+">
                                     </div>
                                     <div class="table-responsive p-0">
-                                        <table class="table text-nowrap table-sm js-expArea">
+                                        <table class="table table-card text-nowrap table-sm js-expArea">
                                             <thead class="table-light text-center">
-                                                <tr>
+                                                <tr class="tr-only-hide">
                                                     <th>服務單位/部門</th>
                                                     <th>職稱</th>
                                                     <th style="min-width:200px">起迄</th>
@@ -391,23 +391,23 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>
+                                                    <td data-th="服務單位/部門">
                                                         <input type="text" class="form-control form-control-sm">
                                                     </td>
-                                                    <td>
+                                                    <td data-th="職稱">
                                                         <input type="text" class="form-control form-control-sm">
                                                     </td>
-                                                    <td>
+                                                    <td data-th="起迄">
                                                         <div class="input-group input-daterange">
                                                             <input type="date" class="form-control form-control-sm">
                                                             <span class="input-group-text" style="height: 31px;">To</span>
                                                             <input type="date" class="form-control form-control-sm">
                                                         </div>
                                                     </td>
-                                                    <td>
+                                                    <td data-th="月薪/年薪">
                                                         <input type="text" class="form-control form-control-sm">
                                                     </td>
-                                                    <td>
+                                                    <td data-th="離職原因">
                                                         <input type="text" class="form-control form-control-sm">
                                                     </td>
                                                 </tr>
@@ -429,9 +429,9 @@
                                 <div class="card-body">
                                     <form>
                                         <div class="table-responsive p-0">
-                                            <table class="table text-nowrap table-sm js-expArea">
+                                            <table class="table table-card text-nowrap table-sm js-expArea">
                                                 <thead class="table-light text-center">
-                                                    <tr>
+                                                    <tr class="tr-only-hide">
                                                         <th></th>
                                                         <th>教育程度</th>
                                                         <th>學校名稱</th>
@@ -442,10 +442,10 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td class="text-center">
+                                                        <td class="text-start status">
                                                             <span class="required">*</span>最高學歷
                                                         </td>
-                                                        <td>
+                                                        <td data-th="教育程度">
                                                             <select class="form-select form-select-sm" required>
                                                                 <option selected></option>
                                                                 <option value="1">博士</option>
@@ -454,29 +454,29 @@
                                                                 <option value="3">高中以下</option>
                                                             </select>
                                                         </td>
-                                                        <td>
+                                                        <td data-th="學校名稱">
                                                             <input type="text" class="form-control form-control-sm" required>
                                                         </td>
-                                                        <td>
+                                                        <td data-th="科系所別">
+                                                            <input type="text" class="form-control form-control-sm" required>
+                                                        </td>
+                                                        <td data-th="就學起迄">
                                                             <div class="input-group">
                                                                 <input type="date" class="form-control form-control-sm" required>
                                                                 <span class="input-group-text" style="height: 31px;">To</span>
                                                                 <input type="date" class="form-control form-control-sm" required>
                                                             </div>
                                                         </td>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm"required>
-                                                        </td>
-                                                        <td>
+                                                        <td data-th="教育程度">
                                                             <input type="text" class="form-control form-control-sm"required>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="text-center">
+                                                        <td class="text-start status">
                                                             次高學歷
                                                         </td>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
+                                                        <td data-th="教育程度">
+                                                            <select class="form-select form-select-sm" required>
                                                                 <option selected></option>
                                                                 <option value="1">博士</option>
                                                                 <option value="2">碩士</option>
@@ -484,51 +484,51 @@
                                                                 <option value="3">高中以下</option>
                                                             </select>
                                                         </td>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm">
+                                                        <td data-th="學校名稱">
+                                                            <input type="text" class="form-control form-control-sm" required>
                                                         </td>
-                                                        <td>
-                                                            <div class="input-group ">
-                                                                <input type="date" class="form-control form-control-sm" required>
-                                                                <span class="input-group-text" style="height: 31px;">To</span>
-                                                                <input type="date" class="form-control form-control-sm" required>
-                                                            </div>
+                                                        <td data-th="科系所別">
+                                                            <input type="text" class="form-control form-control-sm" required>
                                                         </td>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm">
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">
-                                                            其他
-                                                        </td>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option selected></option>
-                                                                <option value="1">博士</option>
-                                                                <option value="2">碩士</option>
-                                                                <option value="3">專科</option>
-                                                                <option value="3">高中以下</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm">
-                                                        </td>
-                                                        <td>
+                                                        <td data-th="就學起迄">
                                                             <div class="input-group">
                                                                 <input type="date" class="form-control form-control-sm" required>
                                                                 <span class="input-group-text" style="height: 31px;">To</span>
                                                                 <input type="date" class="form-control form-control-sm" required>
                                                             </div>
                                                         </td>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm">
+                                                        <td data-th="教育程度">
+                                                            <input type="text" class="form-control form-control-sm" required>
                                                         </td>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm">
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-start status">
+                                                            其他
+                                                        </td>
+                                                        <td data-th="教育程度">
+                                                            <select class="form-select form-select-sm" required>
+                                                                <option selected></option>
+                                                                <option value="1">博士</option>
+                                                                <option value="2">碩士</option>
+                                                                <option value="3">專科</option>
+                                                                <option value="3">高中以下</option>
+                                                            </select>
+                                                        </td>
+                                                        <td data-th="學校名稱">
+                                                            <input type="text" class="form-control form-control-sm" required>
+                                                        </td>
+                                                        <td data-th="科系所別">
+                                                            <input type="text" class="form-control form-control-sm" required>
+                                                        </td>
+                                                        <td data-th="就學起迄">
+                                                            <div class="input-group">
+                                                                <input type="date" class="form-control form-control-sm" required>
+                                                                <span class="input-group-text" style="height: 31px;">To</span>
+                                                                <input type="date" class="form-control form-control-sm" required>
+                                                            </div>
+                                                        </td>
+                                                        <td data-th="教育程度">
+                                                            <input type="text" class="form-control form-control-sm" required>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -682,9 +682,9 @@
                                                 <input type="button" class="btn jess-btn-add js-addList-Btn" data-area="office" value="+">
                                             </div>
                                             <div class="table-responsive p-0">
-                                                <table class="table text-nowrap table-sm js-office">
+                                                <table class="table table-card text-nowrap table-sm js-office">
                                                     <thead class="table-light text-center">
-                                                        <tr>
+                                                        <tr class="tr-only-hide">
                                                             <th>姓名</th>
                                                             <th>所任公司/機關名稱</th>
                                                             <th>部門</th>
@@ -695,22 +695,22 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>
+                                                            <td data-th="姓名">
                                                                 <input type="text" class="form-control form-control-sm">
                                                             </td>
-                                                            <td>
+                                                            <td data-th="所任公司/機關名稱">
                                                                 <input type="text" class="form-control form-control-sm">
                                                             </td>
-                                                            <td>
+                                                            <td data-th="部門">
                                                                 <input type="text" class="form-control form-control-sm">
                                                             </td>
-                                                            <td>
+                                                            <td data-th="稱謂">
                                                                 <input type="text" class="form-control form-control-sm">
                                                             </td>
-                                                            <td>
+                                                            <td data-th="關係 如：主管/同事">
                                                                 <input type="text" class="form-control form-control-sm">
                                                             </td>
-                                                            <td>
+                                                            <td data-th="聯繫電話">
                                                                 <input type="text" class="form-control form-control-sm">
                                                             </td>
                                                         </tr>
@@ -962,17 +962,9 @@
     <script src="../custom_plugin/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- DataTables  & Plugins -->
     <script src="../plugins/datatables/jquery.dataTables.js"></script>
-    <!-- <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script> -->
-    <!-- fullCalendar 2.2.5 -->
-    <!-- <script src="../plugins/moment/moment.js"></script>
-    <script src="../plugins/fullcalendar-scheduler/main.js"></script> -->
     <!-- Select2 -->
     <script src="../plugins/select2/js/select2.full.min.js"></script>
     <!-- date-range-picker -->
-    <!-- <script src="../plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script> -->
     <script src="../plugins/daterangepicker/daterangepicker.js"></script>
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
