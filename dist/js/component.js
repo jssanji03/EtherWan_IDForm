@@ -22,47 +22,76 @@ $(function () {
         dom: "<'row'<'col-xl-12'fr>>" +
             "<'row'<'col-sm-12'tlp>>",
     }
-);
+    );
 
-$('.select2bs4').select2({
-    theme: 'bootstrap4'
-})
-    $("#example1").DataTable({
-        "responsive": false,
-        "lengthChange": false,
-        "autoWidth": false,
+    $('.select2').select2({
+        theme: 'bootstrap4'
+    })
+    $('.datatable-card').DataTable({
         searching: false,
+        pageLength: 3,
+        // stateSave: true,
+        "paging": false,
         "ordering": false,
-        "info": false,
+        "scrollX": true,
         "language": {
+            "info": "顯示 _PAGE_ 至 _PAGES_",
+            "search": "搜尋 :",
             "paginate": {
                 "previous": "上一頁",
                 "next":"下一頁"
             },
-        },
-        dom: "<'row'<'col-12'tl>>" +
-            "<'row'<'col-12 p-2 d-flex justify-content-center'p>>",
-    })
+            "lengthMenu": "顯示 _MENU_ 筆資料"
+          },
+        dom: "<'row'<'col-xl-12'fr>>" +
+            "<'row'<'col-sm-12'tlp>>",
+    }
+  );
+    $('.datatable-card-onlyWord').DataTable({
+        searching: false,
+        pageLength: 3,
+        "paging": false,
+        "ordering": false,
+        "scrollX": true,
+        "language": {
+            "info": "顯示 _PAGE_ 至 _PAGES_",
+            "search": "搜尋 :",
+            "paginate": {
+                "previous": "上一頁",
+                "next":"下一頁"
+            },
+            "lengthMenu": "顯示 _MENU_ 筆資料"
+          },
+        dom: "<'row'<'col-xl-12'fr>>" +
+            "<'row'<'col-sm-12'tlp>>",
+    }
+  );
 
 
-        const pathname = window.location.pathname;
-        const pathArray = pathname.split('/');
-        $(".nav-sidebar li a").each(function () {
-            const navController = $(this).attr("data-controller");
-            if (navController && pathArray.indexOf(navController) >= 0) {
-                $(this).addClass("active");
-                $(this).parents('.nav-treeview').children('.nav-link').addClass("active")
-                $(this).parents('.nav-treeview').parent().addClass("menu-open")
-                $(this).parents('.menu-open').children('.nav-link').addClass("active")
-            }
-        });
+
 });
   
- //Date picker
-$('.birthDate').datepicker({
-    format: 'yyyy/mm/dd',
-});
-
-$('.input-daterange').datepicker({
-    orientation: "bottom auto"
-});
+ $('.summernote').summernote({
+   height: 150,
+   focus: true,
+   toolbar: [
+    ['style', ['style']],
+    ['font', ['bold', 'underline', 'clear']],
+    ['fontname', ['fontname']],
+    ['color', ['color']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    ['table', ['table']],
+    ['insert', ['link']],
+    ['view', ['fullscreen', 'codeview', 'help']],
+  ],
+     callbacks: {
+    onBlur: function(e) {
+        let sHTML = $('.summernote').summernote('code');
+        const submitButton = document.querySelector("#mail-submit")
+        // submitButton.addEventListener("click", (e) => {
+        // e.preventDefault()
+        // console.log(sHTML);
+        // })
+    }
+   }
+ })

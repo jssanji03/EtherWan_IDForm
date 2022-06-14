@@ -6,3 +6,17 @@
         border-left: 5px solid #88157b
     }
 }
+.info-title{
+    color: #437FC7;
+    line-height: 30px;
+}
+.info-content{
+    line-height: 25px;
+    text-decoration: none !important;
+}
+.callout  {
+    a{
+        color: $primary !important;
+        text-decoration: none !important;
+    }
+}

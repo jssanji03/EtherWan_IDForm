@@ -1,13 +1,9 @@
+@charset "UTF-8";
 /* Plugins Master Stylesheet */
 @import url("../../dist/css/adminlte.min.css");
-@import url("../../plugins/bootstrap/dist/css/bootstrap.css");
-@import url("../../plugins/jquery-monthpicker/MonthPicker.min.css");
-@import url("../../plugins/jquery/jquery-ui.min.css");
-@import url("../../plugins/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker.standalone.min.css");
-@import url("../../plugins/DataTables-1.10.25/Responsive-2.2.9/css/responsive.bootstrap5.min.css");
+@import url("../../custom_plugin/bootstrap/dist/css/bootstrap.css");
+@import url("../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css");
 @import url("../../plugins/fontawesome-free/css/all.min.css");
-@import url("../../plugins/fullcalendar/main.min.css");
-@import url("../../plugins/fullcalendar-scheduler/main.min.css");
 @import url("../../plugins/select2/css/select2.min.css");
 @import url("../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css");
 /* :: 1.0 Import Fonts */
@@ -66,12 +62,6 @@ img {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-.content-header .title {
-  padding: 0 5px;
-  color: #88157b;
-  border-left: 5px solid #88157b;
 }
 
 .bg_primary {
@@ -211,6 +201,27 @@ table {
   line-height: 70px;
 }
 
+.content-header .title {
+  padding: 0 5px;
+  color: #88157b;
+  border-left: 5px solid #88157b;
+}
+
+.info-title {
+  color: #437FC7;
+  line-height: 30px;
+}
+
+.info-content {
+  line-height: 25px;
+  text-decoration: none !important;
+}
+
+.callout a {
+  color: #325eaf !important;
+  text-decoration: none !important;
+}
+
 .jess-btn-submit {
   height: 30px;
   font-size: 14px;
@@ -330,6 +341,12 @@ table {
 .btn-menu:hover .fas {
   padding-right: 20px;
   color: #ffffff;
+}
+
+.button-footer {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 10px;
 }
 
 /* effect #2 */
@@ -610,6 +627,140 @@ table.dataTable .assignActive {
   margin-top: 10px;
 }
 
+@media (max-width: 992px) {
+  .datatable-card {
+    border: none !important;
+    min-width: 100%;
+    /*針對tr去做隱藏*/
+  }
+  .datatable-card thead .tr-only-hide {
+    display: none !important;
+  }
+  .datatable-card tbody {
+    background-color: transparent;
+    /*讓tr變成區塊主要讓他有個區塊*/
+  }
+  .datatable-card tbody tr {
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    line-height: 15px;
+    -webkit-box-shadow: 2px 2px 5px #ccc;
+            box-shadow: 2px 2px 5px #ccc;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none !important;
+    padding: 10px !important;
+  }
+  .datatable-card tbody tr:nth-child(odd) {
+    border-left: 10px solid #5a5a5a;
+    border-radius: 20px;
+  }
+  .datatable-card tbody tr:nth-child(even) {
+    border-left: 10px solid #FFCC01;
+    border-radius: 20px;
+    background-color: #ededed;
+  }
+  .datatable-card tbody tr .status:before {
+    display: none;
+  }
+  .datatable-card tbody tr td {
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    border: none !important;
+  }
+  .datatable-card tbody tr td:before {
+    /*最重要的就是這串*/
+    content: attr(data-th) " : ";
+    /*最重要的就是這串*/
+    display: inline-block;
+    text-transform: uppercase;
+    width: 100%;
+    font-weight: 400;
+    margin-right: 10px;
+    text-align: start;
+    color: #325eaf;
+  }
+  .datatable-card tbody tr td input.form-control {
+    width: 90%;
+  }
+  .datatable-card tbody tr td select.form-select {
+    width: 90%;
+  }
+  .datatable-card tfoot {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .datatable-card-onlyWord {
+    border: none !important;
+    min-width: 100%;
+    /*針對tr去做隱藏*/
+  }
+  .datatable-card-onlyWord thead .tr-only-hide {
+    display: none !important;
+  }
+  .datatable-card-onlyWord tbody {
+    background-color: transparent;
+    /*讓tr變成區塊主要讓他有個區塊*/
+  }
+  .datatable-card-onlyWord tbody tr {
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    line-height: 15px;
+    -webkit-box-shadow: 2px 2px 5px #ccc;
+            box-shadow: 2px 2px 5px #ccc;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none !important;
+    padding: 10px !important;
+  }
+  .datatable-card-onlyWord tbody tr:nth-child(odd) {
+    border-left: 10px solid #5a5a5a;
+    border-radius: 20px;
+  }
+  .datatable-card-onlyWord tbody tr:nth-child(even) {
+    border-left: 10px solid #FFCC01;
+    border-radius: 20px;
+    background-color: #ededed;
+  }
+  .datatable-card-onlyWord tbody tr .status:before {
+    display: none;
+  }
+  .datatable-card-onlyWord tbody tr td {
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    border: none !important;
+  }
+  .datatable-card-onlyWord tbody tr td:before {
+    /*最重要的就是這串*/
+    content: attr(data-th) " : ";
+    /*最重要的就是這串*/
+    display: inline-block;
+    text-transform: uppercase;
+    width: 20%;
+    font-weight: 400;
+    margin-right: 10px;
+    text-align: end;
+    color: #325eaf;
+  }
+  .datatable-card-onlyWord tbody tr td input.form-control {
+    width: 90%;
+  }
+  .datatable-card-onlyWord tbody tr td select.form-select {
+    width: 90%;
+  }
+  .datatable-card-onlyWord tfoot {
+    display: none !important;
+  }
+}
+
 body {
   font-family: "Gothic A1", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -685,5 +836,141 @@ ul li {
 
 .hrFile .submit-Btn i {
   font-size: 25px;
+}
+
+.design-process-section {
+  position: relative;
+}
+
+.design-process-section .progress {
+  height: 7px;
+  width: 80%;
+  position: absolute;
+  top: 40%;
+  left: 50px;
+}
+
+.design-process-section .progress .progress-bar {
+  background-color: #18a5a5;
+}
+
+.design-process-section .process-model {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.design-process-section .process-model .process-item {
+  text-align: center;
+  z-index: 99;
+  font-size: 14px;
+}
+
+.design-process-section .process-model .process-item small {
+  color: #505c62;
+}
+
+.design-process-section .process-model .process-item div {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid #ebebeb;
+  background-color: #f0f0f0;
+}
+
+.design-process-section .process-model .process-item div span {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 60px;
+  color: #adadad;
+}
+
+.design-process-section .process-model .process-item p {
+  font-size: 14px;
+  color: #505c62;
+}
+
+.design-process-section .process-model .process-item.waiting_item div {
+  background-color: #ffffff;
+  border: 2px solid #f0b512;
+  padding: 8px;
+}
+
+.design-process-section .process-model .process-item.waiting_item div span {
+  color: #f0b512;
+  line-height: 20px;
+}
+
+.design-process-section .process-model .process-item.active div {
+  background-color: #18a5a5;
+  border: 2px solid #18a5a5;
+}
+
+.design-process-section .process-model .process-item.active div span {
+  color: #FFF;
+}
+
+@media (max-width: 992px) {
+  .design-process-section .progress {
+    height: 7px;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50px;
+  }
+  .design-process-section .progress .progress-bar {
+    background-color: #18a5a5;
+  }
+  .design-process-section .process-model {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .design-process-section .process-model .process-item {
+    text-align: center;
+    z-index: 99;
+    font-size: 10px;
+  }
+  .design-process-section .process-model .process-item small {
+    color: #505c62;
+  }
+  .design-process-section .process-model .process-item div {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid #ebebeb;
+    background-color: #f0f0f0;
+  }
+  .design-process-section .process-model .process-item div span {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: 40px;
+    color: #adadad;
+  }
+  .design-process-section .process-model .process-item p {
+    color: #505c62;
+  }
+  .design-process-section .process-model .process-item.waiting_item div {
+    background-color: #ffffff;
+    border: 2px solid #f0b512;
+    padding: 8px;
+  }
+  .design-process-section .process-model .process-item.waiting_item div span {
+    color: #f0b512;
+    line-height: 20px;
+  }
+  .design-process-section .process-model .process-item.active div {
+    background-color: #18a5a5;
+    border: 2px solid #18a5a5;
+  }
+  .design-process-section .process-model .process-item.active div span {
+    color: #FFF;
+  }
 }
 /*# sourceMappingURL=style.css.map */

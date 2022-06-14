@@ -72,4 +72,171 @@ table.dataTable{
 // DataTable 基本樣式 End //
 
 
+// DataTable Card樣式 Start //
 
+.datatable-card {
+  @media (max-width: 992px) {
+    border: none !important;
+    // background-color: transparent !important;
+    min-width: 100%;
+
+    /*針對tr去做隱藏*/
+    thead {
+      .tr-only-hide {
+        display: none !important;
+      }
+
+    }
+    tbody {
+      background-color: transparent;
+      /*讓tr變成區塊主要讓他有個區塊*/
+      tr {
+        width: 100%;
+        display: block;
+        font-size: 15px;
+        line-height: 15px;
+        box-shadow: 2px 2px 5px #ccc;
+        margin-top: 20px;
+        border-radius: 10px;
+        border: none !important;
+        padding: 10px !important;
+
+        &:nth-child(odd) {
+          border-left: 10px solid $text;
+          border-radius: 20px;
+          
+        }
+
+        &:nth-child(even) {
+          border-left: 10px solid $yellow;
+          border-radius: 20px;
+          background-color:rgb(237, 237, 237);
+        }
+        .status {
+
+          // margin-left: 20px;
+          &:before {
+            display: none;
+          }
+        }
+
+        td {
+          text-align: left;
+          overflow: hidden;
+          width: 100%;
+          display: block;
+          border: none !important;
+
+          &:before {
+            /*最重要的就是這串*/
+            content: attr(data-th) " : ";
+            /*最重要的就是這串*/
+            display: inline-block;
+            text-transform: uppercase;
+            width: 100%;
+            font-weight: 400;
+            margin-right: 10px;
+            text-align: start;
+            color: $primary;
+          }
+          input.form-control{
+            width: 90%;
+          }
+          select.form-select{
+            width: 90%;
+          }
+        }
+      }
+    }
+
+    tfoot {
+      display: none !important;
+    }
+  }
+}
+.datatable-card-onlyWord {
+  @media (max-width: 992px) {
+    border: none !important;
+    // background-color: transparent !important;
+    min-width: 100%;
+
+    /*針對tr去做隱藏*/
+    thead {
+      .tr-only-hide {
+        display: none !important;
+      }
+
+    }
+
+    tbody {
+      background-color: transparent;
+
+      /*讓tr變成區塊主要讓他有個區塊*/
+      tr {
+        width: 100%;
+        display: block;
+        font-size: 15px;
+        line-height: 15px;
+        box-shadow: 2px 2px 5px #ccc;
+        margin-top: 20px;
+        border-radius: 10px;
+        border: none !important;
+        padding: 10px !important;
+
+        &:nth-child(odd) {
+          border-left: 10px solid $text;
+          border-radius: 20px;
+
+        }
+
+        &:nth-child(even) {
+          border-left: 10px solid $yellow;
+          border-radius: 20px;
+          background-color: rgb(237, 237, 237);
+        }
+
+        .status {
+
+          // margin-left: 20px;
+          &:before {
+            display: none;
+          }
+        }
+
+        td {
+          text-align: left;
+          overflow: hidden;
+          width: 100%;
+          display: block;
+          border: none !important;
+
+          &:before {
+            /*最重要的就是這串*/
+            content: attr(data-th) " : ";
+            /*最重要的就是這串*/
+            display: inline-block;
+            text-transform: uppercase;
+            width: 20%;
+            font-weight: 400;
+            margin-right: 10px;
+            text-align: end;
+            color: $primary;
+          }
+
+          input.form-control {
+            width: 90%;
+          }
+
+          select.form-select {
+            width: 90%;
+          }
+        }
+      }
+    }
+
+    tfoot {
+      display: none !important;
+    }
+  }
+}
+// DataTable Card樣式 End //

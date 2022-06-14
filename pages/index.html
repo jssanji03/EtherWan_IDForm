@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini sidebar-collapse">
     <div class="wrapper">
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light justify-content-between">
@@ -44,20 +44,44 @@
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                        <li class="nav-header">EXAMPLES</li>
+                        <!-- <li class="nav-header">EXAMPLES</li> -->
                         <li class="nav-item menu-open">
                             <a href="#" class="nav-link active">
-                                <i class="nav-icon fas fa-book"></i>
+                                <i class="nav-icon far fa-circle"></i>
                                 <p>
-                                    Pages
+                                    履歷表
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="./index.html" class="nav-link active">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-user-alt nav-icon"></i>
                                         <p>新進人員表</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- <li class="nav-header">HR專區</li> -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon far fa-circle"></i>
+                                <p>
+                                    HR專區
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./recruit.html" class="nav-link ">
+                                        <i class="fas fa-briefcase nav-icon"></i>
+                                        <p>招募作業</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./todo.html" class="nav-link ">
+                                        <i class="fas fa-chart-bar nav-icon"></i>
+                                        <p>待辦事項</p>
                                     </a>
                                 </li>
                             </ul>
@@ -117,6 +141,9 @@
                                             <!-- <i class="far fa-circle"></i> -->
                                             個人資料
                                         </a>
+                                        <a class="nav-link js-check-Step "  data-bs-toggle="pill" data-bs-target="#v-home" role="tab" >
+                                            家庭狀況
+                                        </a>
                                         <a class="nav-link js-check-Step" data-bs-toggle="pill" data-bs-target="#v-experience" role="tab">
                                             <!-- <i class="far fa-circle"></i> -->
                                             經歷
@@ -128,6 +155,9 @@
                                         <a class="nav-link js-check-Step" data-bs-toggle="pill" data-bs-target="#v-skill" role="tab" >
                                             <!-- <i class="far fa-circle"></i> -->
                                             技能</a>
+                                        <a class="nav-link js-check-Step" data-bs-toggle="pill" data-bs-target="#v-recommender" role="tab" >
+                                            <!-- <i class="far fa-circle"></i> -->
+                                            推薦人</a>
                                         <a class="nav-link js-check-Step" data-bs-toggle="pill" data-bs-target="#v-personality" role="tab">
                                             <!-- <i class="far fa-circle"></i> -->
                                             過往經驗、特質
@@ -168,8 +198,8 @@
                                         <div class="col-md-6">
                                             <label for="validation04" class="form-label"><span class="required">*</span> 出生日期</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control form-control-sm birthDate" id="validation04" required>
-                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                                <input type="date" class="form-control form-control-sm birthDate" required>
+                                                
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -270,6 +300,21 @@
                                             <label for="validation15" class="form-label"><span class="required">*</span> 電話</label>
                                             <input type="number" class="form-control form-control-sm" id="validation15" required>
                                         </div>
+                                        <div class="col-12">
+                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <div class="card card-primary card-outline tab-pane fade " id="v-home" role="tabpanel" data-slide="家庭狀況">
+                                <div class="card-header">
+                                    <h3 class="card-title mb-0">家庭狀況</h3>
+                                    <!-- /.card-tools -->
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <form class="row g-3 infoArea" >
                                         <div class="col-12 familyStatus">
                                             <div class="d-flex justify-content-between">
                                                 <label class="form-label"> 家庭狀況
@@ -354,9 +399,9 @@
                                                     </td>
                                                     <td>
                                                         <div class="input-group input-daterange">
-                                                            <input type="text" class="form-control form-control-sm">
+                                                            <input type="date" class="form-control form-control-sm">
                                                             <span class="input-group-text" style="height: 31px;">To</span>
-                                                            <input type="text" class="form-control form-control-sm">
+                                                            <input type="date" class="form-control form-control-sm">
                                                         </div>
                                                     </td>
                                                     <td>
@@ -413,10 +458,10 @@
                                                             <input type="text" class="form-control form-control-sm" required>
                                                         </td>
                                                         <td>
-                                                            <div class="input-group input-daterange">
-                                                                <input type="text" class="form-control form-control-sm" required>
+                                                            <div class="input-group">
+                                                                <input type="date" class="form-control form-control-sm" required>
                                                                 <span class="input-group-text" style="height: 31px;">To</span>
-                                                                <input type="text" class="form-control form-control-sm" required>
+                                                                <input type="date" class="form-control form-control-sm" required>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -443,10 +488,10 @@
                                                             <input type="text" class="form-control form-control-sm">
                                                         </td>
                                                         <td>
-                                                            <div class="input-group input-daterange">
-                                                                <input type="text" class="form-control form-control-sm">
+                                                            <div class="input-group ">
+                                                                <input type="date" class="form-control form-control-sm" required>
                                                                 <span class="input-group-text" style="height: 31px;">To</span>
-                                                                <input type="text" class="form-control form-control-sm">
+                                                                <input type="date" class="form-control form-control-sm" required>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -473,10 +518,10 @@
                                                             <input type="text" class="form-control form-control-sm">
                                                         </td>
                                                         <td>
-                                                            <div class="input-group input-daterange">
-                                                                <input type="text" class="form-control form-control-sm">
+                                                            <div class="input-group">
+                                                                <input type="date" class="form-control form-control-sm" required>
                                                                 <span class="input-group-text" style="height: 31px;">To</span>
-                                                                <input type="text" class="form-control form-control-sm">
+                                                                <input type="date" class="form-control form-control-sm" required>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -612,9 +657,20 @@
                                             </div>
                                         </div>
                                         <div class="col-12">
-
-                                            <hr>
+                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
                                         </div>
+                                    </form>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <div class="card card-primary card-outline tab-pane fade" id="v-recommender" role="tabpanel" data-slide="推薦人">
+                                <div class="card-header">
+                                    <h3 class="card-title mb-0">推薦人</h3>
+                                    <!-- /.card-tools -->
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <form class="row g-3 ">
                                         <div class="col-12 ">
                                             <div class="d-flex justify-content-between">
                                                 <div>
@@ -728,6 +784,7 @@
                                 </div>
                                 <!-- /.card-body -->
                             </div>
+                            
                             <div class="card card-primary card-outline tab-pane fade" id="v-end" role="tabpanel" data-slide="確認同意">
                                 <div class="card-header">
                                     <h3 class="card-title mb-0"> 確認同意</h3>
@@ -768,7 +825,7 @@
                                         <div class="col-md-6">
                                             <label for="validation04" class="form-label"><span class="required">*</span> 預計報到日</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control form-control-sm birthDate" id="validation04" required>
+                                                <input class="form-control form-control-sm js-date" name="singleDate" type="date" required>
                                                 <span class="input-group-text"><i class="fa fa-calendar"></i></span>
                                             </div>
                                         </div>
@@ -901,19 +958,22 @@
     <!-- jQuery -->
     <script src="../plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 5 -->
-    <script src="../plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="../custom_plugin/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- DataTables  & Plugins -->
-    <script src="../plugins/DataTables-1.10.25/datatables.min.js"></script>
+    <script src="../plugins/datatables/jquery.dataTables.js"></script>
+    <!-- <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script> -->
     <!-- fullCalendar 2.2.5 -->
-    <script src="../plugins/moment/moment.js"></script>
-    <script src="../plugins/fullcalendar-scheduler/main.js"></script>
+    <!-- <script src="../plugins/moment/moment.js"></script>
+    <script src="../plugins/fullcalendar-scheduler/main.js"></script> -->
     <!-- Select2 -->
     <script src="../plugins/select2/js/select2.full.min.js"></script>
     <!-- date-range-picker -->
-    <script src="../plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- <script src="../plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script> -->
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
     <!-- custom -->

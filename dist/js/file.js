@@ -3,6 +3,8 @@ const tableArea = document.querySelector(".js-familyArea")
 const expArea = document.querySelector(".js-expArea")
 const languageArea = document.querySelector(".js-language")
 const officeArea = document.querySelector(".js-office")
+const recruitArea = document.querySelector(".js-recruitTable")
+const stageArea = document.querySelector(".js-stageArea")
 const confirmDate = document.querySelectorAll(".js-confirmDate")
 const mDate = document.querySelector(".js-Date")
 const submitBtn = document.querySelectorAll(".js-submit")
@@ -127,6 +129,63 @@ function addTemplate(e) {
         </td>
         <td>
           <input type="text" class="form-control form-control-sm">
+        </td>
+        `
+      trAdd.innerHTML = str;
+  }
+  if (addTr == "recruit") {
+      const trAdd = recruitArea.insertRow()
+        let str = `
+        <td data-th="面試結果">
+          <select class="form-select form-select-sm" disabled>
+            <option value="錄取">錄取</option>
+            <option value="備取">備取</option>
+            <option value="未錄取">未錄取</option>
+          </select>
+        </td>
+        <td data-th="應徵姓名">
+          <input type="text" class="form-control form-control-sm">
+        </td>
+        <td data-th="E-Mail">
+          <input type="email" class="form-control form-control-sm">
+        </td>
+        <td data-th="電話">
+            <input type="text" class="form-control form-control-sm">
+        </td>
+        <td class="status text-center">
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                        面試通知
+             </button>
+        </td>
+        <td class="status text-center">
+            <a class="" href="./stage.html">徵選階段</a>
+        </td>
+        `
+      trAdd.innerHTML = str;
+  }
+  if (addTr == "stage") {
+      const trAdd = stageArea.insertRow()
+        let str = `
+        <td data-th="面試方式">
+            <select class="form-select form-select-sm" >
+                <option value="電話面談">電話面談</option>
+                <option value="視訊面談">視訊面談</option>
+                <option value="到場面談">到場面談</option>
+            </select>
+        </td>
+        <td data-th="訪談代表">
+          <input type="text" class="form-control form-control-sm">
+        </td>
+        <td data-th="面談日">
+          <input type="date" class="form-control form-control-sm">
+        </td>
+        <td data-th="備註">
+          <input type="text" class="form-control form-control-sm">
+        </td>
+        <td class="status text-center">
+            <a class="btn btn-sm btn-danger" href="">
+                <i class="fas fa-trash-alt"></i>
+            </a>
         </td>
         `
       trAdd.innerHTML = str;
