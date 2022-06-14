@@ -769,19 +769,19 @@ table.dataTable .assignActive {
 }
 
 @media (max-width: 992px) {
-  .datatable-card-onlyWord {
+  .datatable-RWDcard, .searchResult {
     border: none !important;
     min-width: 100%;
     /*針對tr去做隱藏*/
   }
-  .datatable-card-onlyWord thead .tr-only-hide {
+  .datatable-RWDcard thead .tr-only-hide, .searchResult thead .tr-only-hide {
     display: none !important;
   }
-  .datatable-card-onlyWord tbody {
+  .datatable-RWDcard tbody, .searchResult tbody {
     background-color: transparent;
     /*讓tr變成區塊主要讓他有個區塊*/
   }
-  .datatable-card-onlyWord tbody tr {
+  .datatable-RWDcard tbody tr, .searchResult tbody tr {
     width: 100%;
     display: block;
     font-size: 15px;
@@ -793,26 +793,26 @@ table.dataTable .assignActive {
     border: none !important;
     padding: 10px !important;
   }
-  .datatable-card-onlyWord tbody tr:nth-child(odd) {
+  .datatable-RWDcard tbody tr:nth-child(odd), .searchResult tbody tr:nth-child(odd) {
     border-left: 10px solid #5a5a5a;
     border-radius: 20px;
   }
-  .datatable-card-onlyWord tbody tr:nth-child(even) {
+  .datatable-RWDcard tbody tr:nth-child(even), .searchResult tbody tr:nth-child(even) {
     border-left: 10px solid #FFCC01;
     border-radius: 20px;
     background-color: #ededed;
   }
-  .datatable-card-onlyWord tbody tr .status:before {
+  .datatable-RWDcard tbody tr .status:before, .searchResult tbody tr .status:before {
     display: none;
   }
-  .datatable-card-onlyWord tbody tr td {
+  .datatable-RWDcard tbody tr td, .searchResult tbody tr td {
     text-align: start !important;
     overflow: hidden;
     width: 100%;
     display: block;
     border: none !important;
   }
-  .datatable-card-onlyWord tbody tr td:before {
+  .datatable-RWDcard tbody tr td:before, .searchResult tbody tr td:before {
     /*最重要的就是這串*/
     content: attr(data-th) " : ";
     /*最重要的就是這串*/
@@ -824,13 +824,13 @@ table.dataTable .assignActive {
     text-align: start !important;
     color: #325eaf;
   }
-  .datatable-card-onlyWord tbody tr td input.form-control {
+  .datatable-RWDcard tbody tr td input.form-control, .searchResult tbody tr td input.form-control {
     width: 90%;
   }
-  .datatable-card-onlyWord tbody tr td select.form-select {
+  .datatable-RWDcard tbody tr td select.form-select, .searchResult tbody tr td select.form-select {
     width: 90%;
   }
-  .datatable-card-onlyWord tfoot {
+  .datatable-RWDcard tfoot, .searchResult tfoot {
     display: none !important;
   }
 }
