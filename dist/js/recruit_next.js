@@ -52,6 +52,10 @@ function init() {
                         <a class="" href="./stage.html">甄選階段
                         </a>
                     </td>
+                    <td data-th="履歷表">
+                        <a class="" href="./index.html">履歷表
+                        </a>
+                    </td>
                 </tr>
         `
     recruitArea.innerHTML = str

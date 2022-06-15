@@ -39,9 +39,6 @@ function init() {
                   <td data-th="BPM單號">${items.num}</td>
                   <td data-th="刊登日">${items.date}</td>
                   <td data-th="需求">${items.content}</td>
-                  <td data-th="履歷表">
-                      <a class="" href="./index.html">履歷表
-                  </a>
                   </td>
               </tr>
         `

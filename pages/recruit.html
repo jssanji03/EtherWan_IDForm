@@ -7,7 +7,7 @@
     <title>Files</title>
 
 
-    <
+    
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
     <link rel="stylesheet" href="../dist/scss/style.css">
@@ -197,7 +197,7 @@
                                                 <th>BPM單號</th>
                                                 <th>刊登日</th>
                                                 <th>需求</th>
-                                                <th>履歷表</th>
+                                                
                                             </tr>
                                         </thead>
                                         <tbody class="recruitArea">
@@ -212,10 +212,6 @@
                                                 <td data-th="BPM單號">2022060801</td>
                                                 <td data-th="刊登日">2022/6/8</td>
                                                 <td data-th="需求">擴編</td>
-                                                <td data-th="履歷表">
-                                                    <a class="" href="./index.html">履歷表
-                                                </a>
-                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -225,69 +221,9 @@
                     </div>
                 </div>
             </section>
-            <!-- ##### Table Start ##### -->
-            <!-- <section class="content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card card-secondary card-outline">
-                                <div class="card-header">
-                                    <h3 class="card-title m-0"><strong>應徵者列表</strong></h3>
-                                    <div class="d-flex justify-content-end">
-                                        <input type="button" class="btn jess-btn-add js-addList-Btn" data-area="recruit" value="+">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <table class="table datatable-card nowrap text-center js-recruitTable" style="width: 100%;">
-                                        <thead>
-                                            <tr class="tr-only-hide">
-                                                <th scope="col">面試結果</th>
-                                                <th scope="col">應徵姓名</th>
-                                                <th scope="col">E-Mail</th>
-                                                <th scope="col">電話</th>
-                                                <th scope="col">面試通知</th>
-                                                <th scope="col">甄選階段</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td data-th="面試結果">
-                                                    <select class="form-select form-select-sm" disabled>
-                                                        <option value="錄取">錄取</option>
-                                                        <option value="備取">備取</option>
-                                                        <option value="未錄取">未錄取</option>
-                                                    </select>
-                                                </td>
-                                                <td data-th="應徵姓名">
-                                                    <input type="text" class="form-control form-control-sm">
-                                                </td>
-                                                <td data-th="E-Mail">
-                                                    <input type="email" class="form-control form-control-sm">
-                                                </td>
-                                                <td data-th="電話">
-                                                    <input type="text" class="form-control form-control-sm">
-                                                </td>
-                                                <td class="status text-center">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#interview">
-                                                        面試通知
-                                                    </button>
-                                                </td>
-                                                <td class="status text-center">
-                                                    <a class="" href="./stage.html">徵選階段
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
 
             <!-- Button -->
-            <section class="content button-footer ">
+            <section class="content button-footer">
                 <div class="col-12">
                     <div class="card card-default p-2">
                         <div class="d-flex justify-content-end">
@@ -341,10 +277,18 @@
                                         <input class="form-control form-control-sm js-date" name="singleDate" type="date">
                                     </div>
                                     <!--  需求  -->
-                                    <div class="mb-2 col-12">
+                                    <div class="mb-2 col-lg-3 col-md-6 col-12">
                                         <label class="form-label" for="contentArea">需求:</label>
-                                        <textarea class="form-control col-12 js-content" cols=10 rows="2"
-                                            maxlength="700" id="contentArea"></textarea>
+                                        <select class="form-select form-select-sm js-dept">
+                                            <option selected disabled></option>
+                                            <option value="遞補">遞補</option>
+                                            <option value="擴編">擴編</option>
+                                        </select>
+                                    </div>
+                                    <!--  需求  -->
+                                    <div class="mb-2 col-lg-9 col-md-6 col-12">
+                                        <label class="form-label" for="contentArea">需求說明:</label>
+                                        <textarea class="form-control col-12 js-content" cols=10 rows="1" id="contentArea"></textarea>
                                     </div>
                                 </div>
                             </form>
