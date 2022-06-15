@@ -51,29 +51,5 @@ $(function () {
     }
   );
 
-  $('.summernote').summernote({
-    height: 150,
-    focus: true,
-    toolbar: [
-     ['style', ['style']],
-     ['font', ['bold', 'underline', 'clear']],
-     ['fontname', ['fontname']],
-     ['color', ['color']],
-     ['para', ['ul', 'ol', 'paragraph']],
-     ['table', ['table']],
-     ['insert', ['link']],
-     ['view', ['fullscreen', 'codeview', 'help']],
-   ],
-      callbacks: {
-     onBlur: function(e) {
-         let sHTML = $('.summernote').summernote('code');
-         const submitButton = document.querySelector("#mail-submit")
-         // submitButton.addEventListener("click", (e) => {
-         // e.preventDefault()
-         // console.log(sHTML);
-         // })
-     }
-    }
-  })
 });
   
