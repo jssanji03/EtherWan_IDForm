@@ -326,3 +326,23 @@ table.dataTable{
   }
 }
 // DataTable Card樣式 End //
+
+
+.list-table{
+  thead{
+    width: calc(100% - 1em);
+    display: table;
+    width: 100%;
+    table-layout: fixed
+  }
+  tbody{
+    display: block;
+    height: 200px;
+    overflow-y: scroll;
+    tr{
+      display: table;
+      width: 100%;
+      table-layout:fixed
+    }
+  }
+}

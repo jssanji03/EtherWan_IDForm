@@ -836,6 +836,25 @@ table.dataTable .assignActive {
   }
 }
 
+.list-table thead {
+  width: calc(100% - 1em);
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.list-table tbody {
+  display: block;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.list-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
 body {
   font-family: "Gothic A1", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
