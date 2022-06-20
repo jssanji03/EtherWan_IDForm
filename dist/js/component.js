@@ -53,6 +53,28 @@ $(function () {
         },
     }
   );
-
+    $('.list-table').DataTable({
+     "responsive": false,
+      "lengthChange": false,
+      "autoWidth": false,
+      "searching": false,
+      "paging": false,
+      "info":false,
+    "buttons": [ "excel"],
+    "language": {
+        "info": "顯示 _PAGE_ 至 _PAGES_",
+        "search": "搜尋 :",
+        "paginate": {
+            "previous": "上一頁",
+            "next":"下一頁"
+        },
+      },
+    dom: "<'row'<'col-xl-12'Bfr>>" +
+        "<'row'<'col-sm-12'tlp>>",
+        "initComplete": function (settings, json) {
+            $(".list-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
+        },
+    }
+  )
 });
   

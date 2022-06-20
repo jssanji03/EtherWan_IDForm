@@ -236,6 +236,31 @@ table {
   color: #474747;
 }
 
+body {
+  position: relative;
+}
+
+.lockscreen {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* 水平置中 */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* 垂直置中 */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .jess-btn-submit {
   height: 30px;
   font-size: 14px;
@@ -604,6 +629,10 @@ table.dataTable tbody tr {
   border: 1px solid rgba(134, 200, 238, 0.329);
 }
 
+table.dataTable tbody tr th {
+  padding: 8px;
+}
+
 table.dataTable tbody tr .dateColor {
   color: #2c7edb;
   font-weight: 300;
@@ -612,7 +641,7 @@ table.dataTable tbody tr .dateColor {
 table.dataTable tbody tr td {
   vertical-align: middle;
   outline: none;
-  padding: 8px;
+  padding: 2px;
   white-space: nowrap;
   text-align: center;
 }
@@ -848,25 +877,6 @@ table.dataTable .assignActive {
   .datatable-RWDcard tfoot, .searchResult tfoot {
     display: none !important;
   }
-}
-
-.list-table thead {
-  width: calc(100% - 1em);
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-
-.list-table tbody {
-  display: block;
-  height: 200px;
-  overflow-y: scroll;
-}
-
-.list-table tbody tr {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
 }
 
 body {

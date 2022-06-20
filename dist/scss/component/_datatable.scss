@@ -29,6 +29,9 @@ table.dataTable{
     }
     tbody{
         tr{
+          th{
+            padding: 8px;
+          }
             padding: 0px;
             border: 1px solid rgba(134, 200, 238, 0.329);
             .dateColor{
@@ -38,7 +41,7 @@ table.dataTable{
             td{
               vertical-align: middle;
               outline: none;
-              padding: 8px;
+              padding: 2px;
               white-space:nowrap;
               text-align: center;
           }
@@ -328,21 +331,21 @@ table.dataTable{
 // DataTable Card樣式 End //
 
 
-.list-table{
-  thead{
-    width: calc(100% - 1em);
-    display: table;
-    width: 100%;
-    table-layout: fixed
-  }
-  tbody{
-    display: block;
-    height: 200px;
-    overflow-y: scroll;
-    tr{
-      display: table;
-      width: 100%;
-      table-layout:fixed
-    }
-  }
-}
+// .list-table{
+//   thead{
+//     width: calc(100% - 1em);
+//     display: table;
+//     width: 100%;
+//     table-layout: fixed
+//   }
+//   tbody{
+//     display: block;
+//     height: 200px;
+//     overflow-y: scroll;
+//     tr{
+//       display: table;
+//       width: 100%;
+//       table-layout:fixed
+//     }
+//   }
+// }

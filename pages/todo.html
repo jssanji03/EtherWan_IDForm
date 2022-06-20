@@ -143,55 +143,78 @@
             <section class="content">
                 <div class="container">
                     <div class="row">
-                        <!-- <div class="col-lg-6 col-12">
-                            <div class="card card-secondary card-outline" style="height:320px">
-                                <div class="card-header">
-                                    <h3 class="card-title m-0"><strong>人員流動圖表</strong></h3>
-                                </div>
-                                <div class="card-body">
-                                    <canvas id="pieChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                                </div>
-                            </div>
-                        </div> -->
-                        <div class="col-12" >
-                            <div class="card card-secondary card-outline" style="height:320px">
+                        <div class="col-lg-6 col-12" >
+                            <div class="card card-secondary card-outline" style="min-height:400px">
                                 <div class="card-header">
                                     <h3 class="card-title m-0"><strong>招募職缺表</strong></h3>
                                 </div>
                                 <div class="card-body">
-                                    <table class="table table-striped list-table">
+                                    <table class="table list-table" style="width: 100%;">
                                         <thead>
                                             <tr>
                                                 <th>月份</th>
-                                                <th>職缺</th>
-                                                <th>離職人數</th>
+                                                <th>1月</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th scope="row">6月</th>
-                                                <td>HDV工程師</td>
-                                                <td>2</td>
+                                                <th scope="row">月底人數</th>
+                                                <td>178</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">6月</th>
-                                                <td>HDV工程師</td>
+                                                <th scope="row">新報到</th>
                                                 <td>3</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">6月</th>
-                                                <td>PM</td>
+                                                <th scope="row">離職人數</th>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">離職人數</th>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">確認Offer</th>
                                                 <td>2</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">6月</th>
-                                                <td>HDV工程師</td>
-                                                <td>2</td>
+                                                <th scope="row">招募中</th>
+                                                <td>5</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12" >
+                            <div class="card card-secondary card-outline" style="min-height:400px">
+                                <div class="card-header">
+                                    <h3 class="card-title m-0"><strong>職缺列表</strong></h3>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table list-table" style="width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th>月份</th>
+                                                <th>1月</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">HDV工程師</th>
+                                                <td>1人</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">6月</th>
-                                                <td>PM</td>
-                                                <td>2</td>
+                                                <th scope="row">.NET 工程師</th>
+                                                <td>2人</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">HR 助理</th>
+                                                <td>1人</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">IT 工程師</th>
+                                                <td>2人</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -280,6 +303,11 @@
     <script src="../custom_plugin/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- DataTables  & Plugins -->
     <script src="../plugins/datatables/jquery.dataTables.js"></script>
+    <script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../plugins/jszip/jszip.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <!-- Select2 -->
     <script src="../plugins/select2/js/select2.full.min.js"></script>
     <!-- ChartJS -->
