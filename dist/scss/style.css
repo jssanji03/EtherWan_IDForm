@@ -223,7 +223,7 @@ table {
   text-decoration: none !important;
 }
 
-.select2-container .select2-selection--single, .select2-container--default .select2-selection--multiple {
+.select2-container--bootstrap4 .select2-selection--single, .select2-container .select2-selection--single, .select2-container--default .select2-selection--multiple {
   height: 30px !important;
   border: 1px solid #ccc !important;
 }
