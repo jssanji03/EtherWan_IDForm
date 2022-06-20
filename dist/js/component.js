@@ -53,7 +53,7 @@ $(function () {
         },
     }
   );
-    $('.list-table').DataTable({
+  $('.list-table').DataTable({
      "responsive": false,
       "lengthChange": false,
       "autoWidth": false,
