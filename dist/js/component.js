@@ -11,7 +11,6 @@ $(function () {
     "autoWidth": false,
     "buttons": [ "excel", "pdf", "colvis"],
     "searching": true,
-        // "scrollX": true,
     "language": {
         "info": "顯示 _PAGE_ 至 _PAGES_",
         "search": "搜尋 :",
@@ -23,9 +22,8 @@ $(function () {
           colvis: '顯示欄位'
         }
       },
-    dom: "<'row'<'col-xl-12'Bfr>>" +
-        "<'row'<'col-sm-12'tlp>>",
-        "initComplete": function (settings, json) {
+      dom: "<'row'<'col-xl-12'Bf>>",
+      "initComplete": function (settings, json) {
             $(".searchResult").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
         },
     }
@@ -36,8 +34,8 @@ $(function () {
       "autoWidth": false,
       "searching": false,
       "paging": false,
-      "info":false,
-        // "scrollX": true,
+      "info": false,
+      "buttons": [ "excel", "pdf", "colvis"],
         "language": {
             "info": "顯示 _PAGE_ 至 _PAGES_",
             "search": "搜尋 :",
@@ -45,9 +43,13 @@ $(function () {
                 "previous": "上一頁",
                 "next":"下一頁"
             },
-            "lengthMenu": "顯示 _MENU_ 筆資料"
-          },
-        
+            "lengthMenu": "顯示 _MENU_ 筆資料",
+            buttons: {
+              colvis: '顯示欄位'
+            }
+      },
+        dom: "<'row'<'col-xl-12'Bfr>>" +
+        "<'row'<'col-sm-12'tlp>>",
         "initComplete": function (settings, json) {
             $(".datatable-RWDcard").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
         },
