@@ -22,7 +22,8 @@ $(function () {
           colvis: '顯示欄位'
         }
       },
-      dom: "<'row'<'col-xl-12'Bf>>",
+      // dom: "<'row'<'col-xl-12'Bf>>",
+      "dom": '<"top"<"left-col"B><"center-col"><"right-col"f>>',
       "initComplete": function (settings, json) {
             $(".searchResult").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
         },

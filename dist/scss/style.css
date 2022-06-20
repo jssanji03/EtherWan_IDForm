@@ -879,6 +879,21 @@ table.dataTable .assignActive {
   }
 }
 
+.left-col {
+  float: left;
+  width: 25%;
+}
+
+.center-col {
+  float: left;
+  width: 50%;
+}
+
+.right-col {
+  float: right;
+  width: 25%;
+}
+
 body {
   font-family: "Gothic A1", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
