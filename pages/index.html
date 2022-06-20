@@ -94,6 +94,24 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-header">主管專區</li>
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle"></i>
+                                <p>
+                                    主管專區
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./manager.html" class="nav-link">
+                                        <i class="fas fa-chart-bar nav-icon"></i>
+                                        <p>待辦事項</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -219,17 +237,13 @@
                                                 
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label"> 婚姻</label>
-                                            <div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                                    <label class="form-check-label" for="inlineCheckbox1"> 已婚</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                                    <label class="form-check-label" for="inlineCheckbox2"> 未婚</label>
-                                                </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group">
+                                                <label class="form-label">婚姻</label>
+                                                <select class="form-select form-select-sm select2" multiple="multiple" required>
+                                                    <option value="已婚">已婚</option>
+                                                    <option value="未婚">未婚</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
@@ -241,38 +255,43 @@
                                             <input type="text" class="form-control form-control-sm" id="validation07" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label"> 身份類別</label>
-                                            <div class="idCategory">
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="Checkbox1">
-                                                    <label class="form-check-label" for="Checkbox1"> 一般</label>
+                                            <label class="form-label">身份類別</label>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <select class="form-select form-select-sm select2" style="width:100%;" required>
+                                                        <option selected="selected">Open Menu</option>
+                                                        <option value="一般">一般</option>
+                                                        <option value="外藉">外藉</option>
+                                                    </select>
                                                 </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
-                                                    <label class="form-check-label" for="Checkbox2"> 外藉</label>
-                                                </div>
-                                                <div class="form-check form-check-inline d-inline-flex">
-                                                    <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
-                                                    <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 身障等級：<input type="text" class="form-control form-control-sm" style="width:60px;"></label>
+                                                <div class="col-6">
+                                                    <div class="form-check form-check-inline d-inline-flex">
+                                                        <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                                                        <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 身障等級：
+                                                        <input type="text"
+                                                                class="form-control form-control-sm" style="width:60px;"></label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label"> 兵役</label>
-                                            <div class="idCategory">
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="Checkbox1">
-                                                    <label class="form-check-label" for="Checkbox1"> 免役</label>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <select class="form-select form-select-sm select2" style="width:100%;" required>
+                                                        <option selected="selected">Open Menu</option>
+                                                        <option value="免役">免役</option>
+                                                        <option value="役畢">役畢</option>
+                                                        <option value="未/現役">未/現役</option>
+                                                    </select>
                                                 </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
-                                                    <label class="form-check-label" for="Checkbox2"> 役畢</label>
-                                                </div>
-                                                <div class="form-check form-check-inline d-inline-flex">
-                                                    <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
-                                                    <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 未/現役 (退伍日：
-                                                        <input type="text" class="form-control form-control-sm birthDate" style="width:80px;" placeholder="  年/  月">
-                                                    </label>
+                                                <div class="col-6">
+                                                    <div class="form-check form-check-inline d-inline-flex">
+                                                        <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                                                        <label class="form-check-label d-flex align-items-center" for="Checkbox3">  退伍日：
+                                                            <input type="text" class="form-control form-control-sm birthDate" style="width:80px;" placeholder="  年/  月">
+                                                        </label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -306,19 +325,25 @@
                                         </div>
                                         <div class="col-md-4">
                                             <label for="validation14" class="form-label"><span class="required">*</span> 關係</label>
-                                            <select class="form-select form-select-sm" required>
-                                                <option selected>Open this select menu</option>
-                                                <option value="1">父</option>
-                                                <option value="2">母</option>
-                                                <option value="3">兄弟姊妹</option>
+                                            <select class="form-select form-select-sm select2" required>
+                                                <option selected="selected">Open Menu</option>
+                                                <option value="父">父</option>
+                                                <option value="母">母</option>
+                                                <option value="兄弟姊妹">兄弟姊妹</option>
                                             </select>
                                         </div>
                                         <div class="col-md-4">
                                             <label for="validation15" class="form-label"><span class="required">*</span> 電話</label>
                                             <input type="number" class="form-control form-control-sm" id="validation15" required>
                                         </div>
-                                        <div class="col-12">
-                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        <!-- Button -->
+                                        <div class="col-12 button-footer">
+                                            <div class="card card-default p-2">
+                                                <div class="d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-primary js-submit mr-2"><i
+                                                            class="fas fa-paper-plane me-2"></i>送出</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -352,7 +377,7 @@
                                                     <tbody>
                                                         <tr>
                                                             <td data-th="稱謂">
-                                                                <select class="form-select form-select-sm" required>
+                                                                <select class="form-select form-select-sm select2" required>
                                                                     <option selected>Open this select menu</option>
                                                                     <option value="1">父</option>
                                                                     <option value="2">母</option>
@@ -363,7 +388,7 @@
                                                                 <input type="text" class="form-control form-control-sm">
                                                             </td>
                                                             <td data-th="稱謂">
-                                                                <select class="form-select form-select-sm" required>
+                                                                <select class="form-select form-select-sm select2" required>
                                                                     <option selected>Open this select menu</option>
                                                                     <option value="1">父</option>
                                                                     <option value="2">母</option>
@@ -378,8 +403,13 @@
                                                 </table>
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        <div class="col-12 button-footer">
+                                            <div class="card card-default p-2">
+                                                <div class="d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-primary js-submit mr-2"><i
+                                                            class="fas fa-paper-plane me-2"></i>送出</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -434,8 +464,13 @@
                                     </div>
                                 </div>
                                 <!-- /.card-body -->
-                                <div class="col-12">
-                                    <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                <div class="col-12 button-footer">
+                                    <div class="card card-default p-2">
+                                        <div class="d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-primary js-submit mr-2"><i
+                                                    class="fas fa-paper-plane me-2"></i>送出</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- v-school 學歷-->
@@ -465,7 +500,7 @@
                                                             <span class="required">*</span>最高學歷
                                                         </td>
                                                         <td data-th="教育程度">
-                                                            <select class="form-select form-select-sm" required>
+                                                            <select class="form-select form-select-sm select2" required>
                                                                 <option selected></option>
                                                                 <option value="1">博士</option>
                                                                 <option value="2">碩士</option>
@@ -495,7 +530,7 @@
                                                             次高學歷
                                                         </td>
                                                         <td data-th="教育程度">
-                                                            <select class="form-select form-select-sm" required>
+                                                            <select class="form-select form-select-sm select2" required>
                                                                 <option selected></option>
                                                                 <option value="1">博士</option>
                                                                 <option value="2">碩士</option>
@@ -525,7 +560,7 @@
                                                             其他
                                                         </td>
                                                         <td data-th="教育程度">
-                                                            <select class="form-select form-select-sm" required>
+                                                            <select class="form-select form-select-sm select2" required>
                                                                 <option selected></option>
                                                                 <option value="1">博士</option>
                                                                 <option value="2">碩士</option>
@@ -553,8 +588,13 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <div class="col-12">
-                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        <div class="col-12 button-footer">
+                                            <div class="card card-default p-2">
+                                                <div class="d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-primary js-submit mr-2"><i
+                                                            class="fas fa-paper-plane me-2"></i>送出</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -581,45 +621,38 @@
                                         
                                         <div class="col-md-6">
                                             <label class="form-label"> 駕照</label>
-                                            <div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="licence01" value="option1">
-                                                    <label class="form-check-label" for="licence01"> 無</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="licence02" value="option2">
-                                                    <label class="form-check-label" for="licence02"> 汽車</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="licence03" value="option2">
-                                                    <label class="form-check-label" for="licence03"> 機車</label>
-                                                </div>
-                                            </div>
+                                            <select class="form-select form-select-sm select2" style="width:100%;" multiple="multiple" required>
+                                                <option value="無">無</option>
+                                                <option value="汽車">汽車</option>
+                                                <option value="機車">機車</option>
+                                            </select>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label"> 自備交通工具</label>
-                                            <div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="licence01" value="option1">
-                                                    <label class="form-check-label" for="licence01"> 無</label>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <select class="form-select form-select-sm select2" style="width:100%;" multiple="multiple" required>
+                                                        <option value="無">無</option>
+                                                        <option value="汽車">汽車</option>
+                                                        <option value="機車">機車</option>
+                                                    </select>
                                                 </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="licence02" value="option2">
-                                                    <label class="form-check-label" for="licence02"> 汽車</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="licence03" value="option2">
-                                                    <label class="form-check-label" for="licence03"> 機車</label>
-                                                </div>
-                                                <div class="form-check form-check-inline d-inline-flex">
-                                                    <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
-                                                    <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 其他<input type="text"
-                                                            class="form-control form-control-sm" style="width:60px;"></label>
+                                                <div class="col-6">
+                                                    <div class="form-check form-check-inline d-inline-flex">
+                                                        <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                                                        <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 其他<input type="text"
+                                                                class="form-control form-control-sm" style="width:60px;"></label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        <div class="col-12 button-footer">
+                                            <div class="card card-default p-2">
+                                                <div class="d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-primary js-submit mr-2"><i
+                                                            class="fas fa-paper-plane me-2"></i>送出</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -657,7 +690,7 @@
                                                                 <input type="text" class="form-control form-control-sm">
                                                             </td>
                                                             <td>
-                                                                <select class="form-select form-select-sm" required>
+                                                                <select class="form-select form-select-sm select2" required>
                                                                     <option selected></option>
                                                                     <option value="1">流利</option>
                                                                     <option value="2">中等</option>
@@ -665,7 +698,7 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <select class="form-select form-select-sm" required>
+                                                                <select class="form-select form-select-sm select2" required>
                                                                     <option selected></option>
                                                                     <option value="1">流利</option>
                                                                     <option value="2">中等</option>
@@ -673,7 +706,7 @@
                                                                 </select>
                                                             </td>
                                                             <td>
-                                                                <select class="form-select form-select-sm" required>
+                                                                <select class="form-select form-select-sm select2" required>
                                                                     <option selected></option>
                                                                     <option value="1">流利</option>
                                                                     <option value="2">中等</option>
@@ -693,8 +726,13 @@
                                                 </table>
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        <div class="col-12 button-footer">
+                                            <div class="card card-default p-2">
+                                                <div class="d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-primary js-submit mr-2"><i
+                                                            class="fas fa-paper-plane me-2"></i>送出</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -754,8 +792,13 @@
                                                 </table>
                                             </div>
                                         </div>
-                                        <div class="col-12">
-                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        <div class="col-12 button-footer">
+                                            <div class="card card-default p-2">
+                                                <div class="d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-primary js-submit mr-2"><i
+                                                            class="fas fa-paper-plane me-2"></i>送出</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -814,8 +857,13 @@
                                             <label for="Textarea09" class="form-label"><span class="required">*</span> 您如何展現『當責』態度於工作中？請舉例說明。</label>
                                             <textarea class="form-control" id="Textarea09" rows="3" required></textarea>
                                         </div>
-                                        <div class="col-12">
-                                            <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        <div class="col-12 button-footer">
+                                            <div class="card card-default p-2">
+                                                <div class="d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-primary js-submit mr-2"><i
+                                                            class="fas fa-paper-plane me-2"></i>送出</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -832,27 +880,31 @@
                                     <form class="row g-3 ">
                                         <div class="col-md-12">
                                             <label class="form-label"><span class="required">*</span> 應徵管道</label>
-                                            <div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="licence01" value="option1">
-                                                    <label class="form-check-label" for="licence01"> 104</label>
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <select class="form-select form-select-sm select2" style="width:100%;" multiple="multiple" required>
+                                                        <option value="104">104</option>
+                                                        <option value="徵才活動">徵才活動</option>
+                                                        <option value="員工推薦">員工推薦</option>
+                                                    </select>
                                                 </div>
-                                                <div class="form-check form-check-inline d-inline-flex">
-                                                    <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
-                                                    <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 徵才活動名：<input type="text"
-                                                            class="form-control form-control-sm" style="width:60px;"></label>
+                                                <div class="col-8">
+                                                    <div class="form-check form-check-inline d-inline-flex">
+                                                        <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                                                        <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 其他<input type="text"
+                                                                class="form-control form-control-sm" style="width:60px;"></label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline d-inline-flex">
+                                                        <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                                                        <label class="form-check-label d-flex align-items-center" for="Checkbox3">員工名：<input type="text"
+                                                                class="form-control form-control-sm" style="width:60px;"></label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline d-inline-flex">
+                                                        <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                                                        <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 徵才活動名：<input type="text"
+                                                                class="form-control form-control-sm" style="width:60px;"></label>
+                                                    </div>
                                                 </div>
-                                                <div class="form-check form-check-inline d-inline-flex">
-                                                    <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
-                                                    <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 員工推薦，員工名：<input type="text"
-                                                            class="form-control form-control-sm" style="width:60px;"></label>
-                                                </div>
-                                                <div class="form-check form-check-inline d-inline-flex">
-                                                    <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
-                                                    <label class="form-check-label d-flex align-items-center" for="Checkbox3"> 其它：<input type="text"
-                                                            class="form-control form-control-sm" style="width:60px;"></label>
-                                                </div>
-                                                
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -891,8 +943,16 @@
                                         <div class="col-md-6 text-center">
                                             <label class="form-label">填表日期：<span class="js-confirmDate"></span></label>
                                         </div>
-                                        <div class="col-12 ">
+                                        <!-- <div class="col-12 ">
                                             <button class="submit-Btn js-submit"><i class="fas fa-paper-plane"></i></button>
+                                        </div> -->
+                                        <div class="col-12 button-footer">
+                                            <div class="card card-default p-2">
+                                                <div class="d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-primary js-submit mr-2"><i
+                                                            class="fas fa-paper-plane me-2"></i>送出</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -905,16 +965,9 @@
                 <!-- /.row -->
             </section>
             <!-- /.content -->
-            <!-- <section>
-                <div class="col-12">
-                    <button class="submit-Btn"><i class="fas fa-paper-plane"></i></button>
-                </div>
-            </section> -->
-        </div>
-        <!-- /.content-wrapper -->
-        <section>
             
             <!-- Modal -->
+    <section>
             <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl modal-fullscreen-sm-down">
@@ -977,7 +1030,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
+        </div>
+        <!-- /.content-wrapper -->
+    
         <footer class="main-footer">
             <div class="float-right d-none d-sm-block">
                 <b>Version</b> 3.2.0

@@ -98,6 +98,24 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-header">主管專區</li>
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle"></i>
+                                <p>
+                                    主管專區
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./manager.html" class="nav-link">
+                                        <i class="fas fa-chart-bar nav-icon"></i>
+                                        <p>待辦事項</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -185,7 +203,6 @@
                                         style="width: 100%;">
                                         <thead>
                                             <tr class="tr-only-hide">
-                                                <th scope="col">面試結果</th>
                                                 <th scope="col">應徵姓名</th>
                                                 <th scope="col">E-Mail</th>
                                                 <th scope="col">電話</th>
@@ -237,9 +254,7 @@
                 <div class="col-12">
                     <div class="card card-default p-2">
                         <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn btn-warning mr-2"><i class="fas fa-save me-2"></i>儲存</button>
                             <button type="submit" class="btn btn-primary mr-2"><i class="fas fa-check-circle me-2"></i>結案</button>
-                            <button type="submit" class="btn btn-danger"><i class="fas fa-times-circle me-2"></i>作廢</button>
                         </div>
                     </div>
                 </div>
@@ -258,16 +273,6 @@
                             <form class="js-Form">
                                 <div class="row">
                                     <div class="mb-2 col-lg-3 col-md-6 col-12">
-                                        <label class="form-label">面試結果:</label>
-                                        <select class="form-select form-select-sm js-recruitResult" disabled>
-                                            <option value="錄取">錄取</option>
-                                            <option value="備取">備取</option>
-                                            <option value="未錄取">未錄取</option>
-                                        </select>
-                                        <div class="col-12 p-0">
-                                        </div>
-                                    </div>
-                                    <div class="mb-2 col-lg-3 col-md-6 col-12">
                                         <label class="col-12 form-label">應徵姓名:</label>
                                         <input type="text" class="form-control form-control-sm js-recruitName">
                                     </div>
@@ -283,9 +288,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
                             <button type="button" class="btn btn-primary js-addRecruitList" >新增</button>
-                            <button type="button" class="btn btn-info js-editSave">儲存</button>
                         </div>
                     </div>
                 </div>

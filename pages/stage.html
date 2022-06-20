@@ -95,6 +95,24 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-header">主管專區</li>
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle"></i>
+                                <p>
+                                    主管專區
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./manager.html" class="nav-link">
+                                        <i class="fas fa-chart-bar nav-icon"></i>
+                                        <p>待辦事項</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -187,10 +205,11 @@
                                         <thead>
                                             <tr class="tr-only-hide">
                                                 <th scope="col">面試方式</th>
-                                                <th scope="col">訪談代表</th>
+                                                <th scope="col">員工編號</th>
+                                                <th scope="col">員工姓名</th>
                                                 <th scope="col">面談日</th>
                                                 <th scope="col">備註</th>
-                                                <th scope="col">刪除</th>
+                                                <th scope="col">已確認</th>
                                             </tr>
                                         </thead>
                                         <tbody class="stageArea">
@@ -241,15 +260,14 @@
                                                 <select class="form-select">
                                                     <option selected> </option>
                                                     <option>錄取</option>
-                                                    <option>備取</option>
-                                                    <option>未錄取</option>
+                                                    <option>不錄取</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-lg-3 col-md-6">
                                             <div class="form-group">
                                                 <label for="columnName">發送日期</label>
-                                                <input class="form-control" type="date" id="" value="">
+                                                <input class="form-control" type="date" id="" value="" disabled>
                                             </div>
                                         </div>
                                         
@@ -258,8 +276,9 @@
                                                 <label for="columnName">報到</label>
                                                 <select class="form-select">
                                                     <option></option>
-                                                    <option>同意</option>
+                                                    <option>預計報到日</option>
                                                     <option>拒絕</option>
+                                                    <option>取消報到</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -319,12 +338,11 @@
                                         <label class="form-label">面試方式:</label>
                                         <select class="form-select form-select-sm js-stageMode">
                                             <option value="電話面談">電話面談</option>
-                                            <option value="視訊面談">視訊面談</option>
                                             <option value="到場面談">到場面談</option>
                                         </select>
                                     </div>
                                     <div class="mb-2 col-lg-4 col-md-6 col-12">
-                                        <label class="col-12 form-label">訪談代表:</label>
+                                        <label class="col-12 form-label">員工編號:</label>
                                         <input type="text" class="form-control form-control-sm js-stageName">
                                     </div>
                                     <div class="mb-2 col-lg-4 col-md-6 col-12">
@@ -339,9 +357,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
                             <button type="button" class="btn btn-primary js-addStage">新增</button>
-                            <button type="button" class="btn btn-info js-editSave">儲存</button>
                         </div>
                     </div>
                 </div>

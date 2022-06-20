@@ -1,6 +1,5 @@
 const addRecruitList = document.querySelector('.js-addRecruitList')
 const formArea = document.querySelector('.js-Form')
-const recruitResult = document.querySelector('.js-recruitResult')
 const recruitName = document.querySelector('.js-recruitName')
 const recruitMail = document.querySelector('.js-recruitMail')
 const recruitTel = document.querySelector('.js-recruitTel')
@@ -12,7 +11,6 @@ let i = 0
 function addNewRecruit(e) {
   const obj = {}
   obj.id = ++i
-  obj.result = recruitResult.value
   obj.name = recruitName.value
   obj.mail = recruitMail.value
   obj.tel = recruitTel.value
@@ -30,9 +28,6 @@ function init() {
     const recruitArea = document.querySelector('.recruitListArea')
     str += `
                  <tr>
-                    <td data-th="面試結果">
-                        ${items.result}
-                    </td>
                     <td data-th="應徵姓名">
                          ${items.name}
                     </td>

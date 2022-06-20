@@ -5,6 +5,8 @@ const formDate = document.querySelector('.js-date')
 const formJob = document.querySelector('.js-job')
 const formNum = document.querySelector('.js-num')
 const formContent = document.querySelector('.js-content')
+const formContentArea = document.querySelector('.js-contentArea')
+const formPriority = document.querySelector('.js-priority')
 let data = []
 addRecruitList.addEventListener('click', addNewList)
 
@@ -17,6 +19,8 @@ function addNewList(e) {
   obj.job = formJob.value
   obj.num = formNum.value
   obj.content = formContent.value
+  obj.contentArea = formContentArea.value
+  obj.priority = formPriority.value
 
   data.push(obj)
   console.log(data);
@@ -31,7 +35,8 @@ function init() {
     str += `
                 <tr>
                   <td class="status text-center">
-                      <a class="btn btn-sm btn-warning" href="./recruit_next.html"><i class="fas fa-pen"></i></a>
+                  <a class="btn btn-sm btn-info" href="./recruit_next.html"><i class="fas fa-eye"></i></a>
+                  <a class="btn btn-sm btn-warning" href="./recruit_next.html"><i class="fas fa-pen"></i></a>
                   </td>
                   <td data-th="狀態"><span>Open</span></td>
                   <td data-th="部門">${items.dept}</td>
@@ -39,6 +44,8 @@ function init() {
                   <td data-th="BPM單號">${items.num}</td>
                   <td data-th="刊登日">${items.date}</td>
                   <td data-th="需求">${items.content}</td>
+                  <td data-th="需求說明">${items.contentArea}</td>
+                  <td data-th="優先度">${items.priority}</td>
                   </td>
               </tr>
         `

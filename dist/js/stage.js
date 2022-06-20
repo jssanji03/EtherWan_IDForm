@@ -75,8 +75,11 @@ function init() {
                     <td data-th="面試方式">
                         ${items.stageMode}
                     </td>
-                    <td data-th="訪談代表">
+                    <td data-th="員工編號">
                          ${items.stageName}
+                    </td>
+                    <td data-th="員工姓名">
+                        
                     </td>
                     <td data-th="面談日">
                         ${items.stageDate}
@@ -85,9 +88,9 @@ function init() {
                         ${items.stageContent}
                     </td>
                     <td class="status text-center">
-                        <a class="btn btn-sm btn-danger" href="">
-                            <i class="fas fa-trash-alt"></i>
-                        </a>
+                       <div class="form-check form-check-inline d-inline-flex">
+                            <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                        </div>
                     </td>
                 </tr>
         `
