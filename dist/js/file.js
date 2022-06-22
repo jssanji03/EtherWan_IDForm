@@ -8,6 +8,8 @@ const stageArea = document.querySelector(".js-stageArea")
 const confirmDate = document.querySelectorAll(".js-confirmDate")
 const mDate = document.querySelector(".js-Date")
 const submitBtn = document.querySelectorAll(".js-submit")
+
+
 addFormToList.forEach((item) => {
   item.addEventListener("click", addTemplate)
 })
@@ -210,6 +212,7 @@ function today() {
 // submitBtn.forEach((item) => {
 //   item.addEventListener("click", completedForm)
 // })
+
 function completedForm(e) {
   const menuStep = document.querySelectorAll(".js-check-Step")
   

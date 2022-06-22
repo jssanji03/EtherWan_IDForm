@@ -236,31 +236,6 @@ table {
   color: #474747;
 }
 
-body {
-  position: relative;
-}
-
-.lockscreen {
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-  opacity: 0.6;
-  z-index: 99999;
-  position: fixed;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  /* 水平置中 */
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  /* 垂直置中 */
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .jess-btn-submit {
   height: 30px;
   font-size: 14px;

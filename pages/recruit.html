@@ -7,7 +7,7 @@
     <title>Files</title>
 
 
-    
+
     <!-- Theme style -->
     <link rel="stylesheet" href="../dist/css/adminlte.min.css">
     <link rel="stylesheet" href="../dist/scss/style.css">
@@ -26,13 +26,13 @@
             </ul>
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
-            
+
                 <li class="nav-item">
                     <a class="nav-link" href="./login.html" role="button">
                         Login
                     </a>
                 </li>
-            
+
             </ul>
         </nav>
         <!-- /.navbar -->
@@ -178,19 +178,22 @@
                                                 <label for="columnName">狀態</label>
                                                 <select class="form-select select2">
                                                     <option selected></option>
-                                                    <option >Open</option>
-                                                    <option >Close</option>
+                                                    <option>Open</option>
+                                                    <option>Close</option>
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-footer text-end">
-                                    <button type="button" class="btn btn-warning mr-3 " id="btn-search"><i class="fas fa-download"></i>
+                                    <button type="button" class="btn btn-warning mr-3 " id="btn-search"><i
+                                            class="fas fa-download"></i>
                                     </button>
-                                    <button type="button" class="btn btn-secondary mr-3 " id="btn-search"><i class="fas fa-search"></i>
+                                    <button type="button" class="btn btn-secondary mr-3 " id="btn-search"><i
+                                            class="fas fa-search"></i>
                                     </button>
-                                    <button type="button" class="btn btn-primary mr-3" data-bs-toggle="modal" data-bs-target="#addNewRecruit" id="btn-add"><i class="fas fa-plus"></i>
+                                    <button type="button" class="btn btn-primary mr-3" data-bs-toggle="modal"
+                                        data-bs-target="#addNewRecruit" id="btn-add"><i class="fas fa-plus"></i>
                                     </button>
                                 </div>
                             </div>
@@ -225,9 +228,11 @@
                                         <tbody class="recruitArea">
                                             <tr>
                                                 <td class="status text-center">
-                                                    <a class="btn btn-sm btn-info" href="./recruit_next.html"><i class="fas fa-eye"></i>
+                                                    <a class="btn btn-sm btn-info" href="./recruit_next.html"><i
+                                                            class="fas fa-eye"></i>
                                                     </a>
-                                                    <a class="btn btn-sm btn-warning" href="#"><i class="fas fa-pen"></i>
+                                                    <a class="btn btn-sm btn-warning" href="#"><i
+                                                            class="fas fa-pen"></i>
                                                     </a>
                                                 </td>
                                                 <td data-th="狀態"><span>Open</span></td>
@@ -264,7 +269,7 @@
                                     <div class="mb-2 col-lg-3 col-md-6 col-12">
                                         <label class="form-label">部門:</label>
                                         <div class="col-12 p-0">
-                                            <select class="form-select form-select-sm js-dept">
+                                            <select class="form-select form-select-sm js-dept select2">
                                                 <option selected disabled hidden>Open this select menu</option>
                                                 <option value="生產部">生產部</option>
                                                 <option value="行銷部">行銷部</option>
@@ -275,26 +280,29 @@
                                     </div>
                                     <div class="mb-2 col-lg-3 col-md-6 col-12">
                                         <div class="form-group col-lg-12">
-                                            <label class="col-12 form-label" >職缺:</label>
-                                            <input class="form-control form-control-sm js-job" type="text" value="HDV工程師"></input>
+                                            <label class="col-12 form-label">職缺:</label>
+                                            <input class="form-control form-control-sm js-job" type="text"
+                                                value="HDV工程師"></input>
                                         </div>
                                     </div>
                                     <div class="mb-2 col-lg-3 col-md-6 col-12">
                                         <div class="form-group col-lg-12">
                                             <label class="col-12 form-label" for="fixedArea">BPM單號:</label>
-                                            <input class="form-control form-control-sm js-num" type="text" value="2022060801"></input>
+                                            <input class="form-control form-control-sm js-num" type="text"
+                                                value="2022060801"></input>
                                         </div>
                                     </div>
                                     <!--  刊登日  -->
                                     <div class="mb-2 col-lg-3 col-md-6 col-12">
                                         <label class="form-label">刊登日:</label>
-                                        <input class="form-control form-control-sm js-date" name="singleDate" type="date">
-                                        
+                                        <input class="form-control form-control-sm js-date" name="singleDate"
+                                            type="date">
+
                                     </div>
                                     <!-- 優先度 -->
                                     <div class="mb-2 col-lg-3 col-md-6 col-12">
                                         <label class="form-label" for="contentArea">優先度:</label>
-                                        <select class="form-select form-select-sm js-priority">
+                                        <select class="form-select form-select-sm js-priority select2">
                                             <option selected disabled></option>
                                             <option value="高">高</option>
                                             <option value="中">中</option>
@@ -304,7 +312,7 @@
                                     <!--  需求  -->
                                     <div class="mb-2 col-lg-3 col-md-6 col-12">
                                         <label class="form-label" for="contentArea">需求:</label>
-                                        <select class="form-select form-select-sm js-content">
+                                        <select class="form-select form-select-sm js-content select2">
                                             <option selected disabled></option>
                                             <option value="遞補">遞補</option>
                                             <option value="擴編">擴編</option>
@@ -313,7 +321,8 @@
                                     <!--  需求  -->
                                     <div class="mb-2 col-md-6 col-12">
                                         <label class="form-label" for="contentArea">需求說明:</label>
-                                        <textarea class="form-control col-12 js-contentArea" cols=10 rows="1" id="contentArea"></textarea>
+                                        <textarea class="form-control col-12 js-contentArea" cols=10 rows="1"
+                                            id="contentArea"></textarea>
                                     </div>
                                 </div>
                             </form>
@@ -325,7 +334,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">

@@ -32,25 +32,3 @@ line-height: 20px !important;
 .select2-container--default .select2-selection--multiple .select2-selection__choice{
     color: rgb(71, 71, 71);
 }
-body{
-    position: relative;
-}
-.lockscreen{
-    width: 100vw;
-    height: 100vh;
-    background-color: #000;
-    opacity: 0.6;
-    z-index: 99999;
-    position: fixed;
-    top: 0;
-    display: flex;
-    /* 水平置中 */
-    justify-content: center;
-    /* 垂直置中 */
-    align-items: center;
-    // .lockscreen-items{
-    //     position: fixed;
-    //     top: 40%;
-    //     left:45%
-    // }
-}

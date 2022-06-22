@@ -3,7 +3,8 @@
 $(function () {
 
   $('.select2').select2({
-      // theme: 'bootstrap4'
+      // theme: 'bootstrap4's
+    // dropdownParent: "#addNewRecruit"
   })
   $('.searchResult').DataTable({
     "responsive": false,
@@ -74,9 +75,6 @@ $(function () {
       },
     dom: "<'row'<'col-xl-12'Bfr>>" +
         "<'row'<'col-sm-12'tlp>>",
-        "initComplete": function (settings, json) {
-            $(".list-table").wrap("<div style='overflow:auto; width:100%;position:relative;'></div>");
-        },
     }
   )
 });
