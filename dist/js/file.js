@@ -8,7 +8,53 @@ const stageArea = document.querySelector(".js-stageArea")
 const confirmDate = document.querySelectorAll(".js-confirmDate")
 const mDate = document.querySelector(".js-Date")
 const submitBtn = document.querySelectorAll(".js-submit")
+const data = [
+  {
+    "id": 1,
+    "appellation": "父",
+    "Profession":"工程師"
+  },
+  {
+    "id": 2,
+    "appellation": "母",
+    "Profession":"家管"
+  },
+  {
+    "id": 3,
+    "appellation": "兄弟姊妹",
+    "Profession":"空姐"
+  }
+]
 
+data.forEach((item) => {
+  console.log(item);
+})
+const template = () => {
+  return `
+  <td data-th="稱謂">
+            <select class="form-select form-select-sm" required>
+              <option selected>Open this select menu</option>
+              <option value="1">父</option>
+              <option value="2">母</option>
+              <option value="3">兄弟姊妹</option>
+            </select>
+        </td>
+        <td data-th="職業">
+            <input type="text" class="form-control form-control-sm">
+        </td>
+        <td data-th="稱謂">
+            <select class="form-select form-select-sm" required>
+              <option selected>Open this select menu</option>
+              <option value="1">父</option>
+              <option value="2">母</option>
+              <option value="3">兄弟姊妹</option>
+            </select>
+        </td>
+        <td data-th="職業">
+            <input type="text" class="form-control form-control-sm">
+        </td>
+  `
+}
 
 addFormToList.forEach((item) => {
   item.addEventListener("click", addTemplate)
@@ -237,6 +283,4 @@ function completedForm(e) {
 
 $(window).ready(() => {
 	$('#myModal').modal('show');
-	// setTimeout(() => $('#myModal').modal('show'), 1000);
-	// setTimeout(() => $('#myModal').modal('hide'), 4000);
 })
