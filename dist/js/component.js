@@ -4,7 +4,7 @@ $(function () {
 
   $('.select2').select2({
       // theme: 'bootstrap4's
-    // dropdownParent: "#addNewRecruit"
+    dropdownParent: "#addNewRecruit"
   })
   $('.searchResult').DataTable({
     "responsive": false,
